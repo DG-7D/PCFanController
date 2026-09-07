@@ -34,18 +34,22 @@ int main() {
     SPI0.CTRLA = ~SPI_DORD_bm | SPI_MASTER_bm | ~SPI_CLK2X_bm | SPI_PRESC_DIV16_gc | SPI_ENABLE_bm;
 
     sei();
+    uint16_t rpm = 0;
     while (1) {
-        cli();
-        const uint16_t ticks = pulseWidth;
-        sei();
-        uint16_t rpm;
-        if (ticks == 0) {
-            rpm = 0;
-        } else {
-            rpm = CLK_TICKS_PER_MIN / ticks / 2;
-        }
         if (ledUpdateFlag) {
             ledUpdateFlag = false;
+
+            if (nextDigit == 0) {
+                cli();
+                const uint16_t ticks = pulseWidth;
+                sei();
+                if (ticks == 0) {
+                    rpm = 0;
+                } else {
+                    rpm = CLK_TICKS_PER_MIN / ticks / 2;
+                }
+            }
+
             PORTA.OUTCLR = PIN4_bm;
             SPI0.DATA = 1 << nextDigit;
             nextDigit = (nextDigit + 1) % 4;
