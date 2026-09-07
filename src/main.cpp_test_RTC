@@ -1,0 +1,26 @@
+#include <avr/interrupt.h>
+#include <avr/io.h>
+
+int main() {
+    _PROTECTED_WRITE(CLKCTRL.MCLKCTRLB, ~CLKCTRL_PEN_bm);
+
+    PORTB.DIRSET = PIN0_bm;
+
+    RTC.CLKSEL = RTC_CLKSEL_INT32K_gc;
+    RTC.CTRLA = RTC_PRESCALER_DIV1_gc | RTC_RTCEN_bm;
+    while (RTC.STATUS & RTC_CTRLBUSY_bm) {
+        ;
+    }
+    while (1) {
+        while (RTC.STATUS & RTC_CNTBUSY_bm) {
+            ;
+        }
+        const uint16_t time = RTC.CNT;
+        // PORTB.OUTTGL = PIN0_bm; // ここまではきてる
+        if (time & 0x8000) {
+            PORTB.OUTSET = PIN0_bm;
+        } else {
+            PORTB.OUTCLR = PIN0_bm;
+        }
+    }
+}

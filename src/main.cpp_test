@@ -1,0 +1,34 @@
+#include <avr/interrupt.h>
+#include <avr/io.h>
+
+int main() {
+    _PROTECTED_WRITE(CLKCTRL.MCLKCTRLB, ~CLKCTRL_PEN_bm);
+
+    PORTB.DIRSET = PIN0_bm;
+    PORTB.DIRCLR = PIN1_bm;
+    PORTB.PIN1CTRL = PORT_PULLUPEN_bm | PORT_ISC_RISING_gc;
+
+    TCA0.SINGLE.CMP0 = 0x7FFF; // この後触らなければちゃんと50%が出る→TCAは機能してる
+    TCA0.SINGLE.CTRLB = TCA_SINGLE_CMP0EN_bm | TCA_SINGLE_WGMODE_SINGLESLOPE_gc;
+    TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV1_gc | TCA_SINGLE_ENABLE_bm;
+
+    RTC.CLKSEL = RTC_CLKSEL_INT32K_gc;
+    RTC.CTRLA = RTC_PRESCALER_DIV1_gc | RTC_RTCEN_bm;
+    while (RTC.STATUS & RTC_CTRLBUSY_bm) {
+        ;
+    }
+
+    sei();
+    while (1) {
+    }
+}
+
+ISR(PORTB_PORT_vect) {
+    PORTB.INTFLAGS = PIN1_bm;
+    while (RTC.STATUS & RTC_CNTBUSY_bm) {
+        ;
+    }
+    const uint16_t time = RTC.CNT;
+    TCA0.SINGLE.CMP0 = time; // 0になる
+    // PORTB.OUTTGL = PIN0_bm; // TCA無効にしてこれにすると正しく出る→割り込みは機能してる
+}
