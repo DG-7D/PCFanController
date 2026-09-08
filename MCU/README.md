@@ -27,14 +27,14 @@ i  PA7 PA0 x
 
 ```
 74HC595
-QB  VCC
-QC   QA
-QD   SI 7D
-QE    G GND
-QF  RCK 7R
-QG  SCK 7C
-QH  SCL VCC
-GND QH'
+G QB  VCC
+F QC   QA P
+E QD   SI 7D
+D QE    G GND
+C QF  RCK 7R
+B QG  SCK 7C
+A QH  SCL VCC
+  GND QH'
 ```
 
 ```

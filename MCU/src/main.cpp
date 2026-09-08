@@ -9,6 +9,21 @@ constexpr uint32_t CLK_TICKS_PER_MIN = F_CPU / PWM_PERIOD_CLOCKS * 60;
 constexpr uint32_t TIMEOUT_TICKS = CLK_TICKS_PER_MIN / MIN_RPM / 2;
 constexpr uint8_t LED_TICKS_PER_DIGIT = 64; // 1桁391Hz、4桁98Hz
 
+constexpr uint8_t LED_7SEG_NUM_BITS[] = {
+    // GFEDCBA
+    0b00111111,
+    0b00000110,
+    0b01011011,
+    0b00011111,
+    0b01100110,
+    0b01101101,
+    0b01111110,
+    0b00000111,
+    0b01111111,
+    0b01011111,
+};
+constexpr uint8_t LED_7SEG_DP_BIT = 0b10000000;
+
 volatile uint16_t time = 0;
 volatile uint16_t lastPulse = 0;
 volatile uint16_t pulseWidth = 0;
@@ -31,7 +46,7 @@ int main() {
     TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV1_gc | TCA_SINGLE_ENABLE_bm;
 
     SPI0.CTRLB = ~SPI_BUFEN_bm | SPI_SSD_bm | SPI_MODE_0_gc;
-    SPI0.CTRLA = ~SPI_DORD_bm | SPI_MASTER_bm | ~SPI_CLK2X_bm | SPI_PRESC_DIV16_gc | SPI_ENABLE_bm;
+    SPI0.CTRLA = SPI_DORD_bm | SPI_MASTER_bm | ~SPI_CLK2X_bm | SPI_PRESC_DIV16_gc | SPI_ENABLE_bm;
 
     sei();
     uint16_t rpm = 0;
