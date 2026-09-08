@@ -14,13 +14,27 @@
     - PA2: MISO (未使用)
 
 ```
-  VDD GND
-7 PA4 PA3 7
-i PA5 PA2 x
-i PA6 PA1 7
-i PA7 PA0 x
-  PB3 PB0 F
-  PB2 PB1 F
+ATtiny404
+
+   VDD GND
+7R PA4 PA3 7C
+i  PA5 PA2 x
+i  PA6 PA1 7D
+i  PA7 PA0 x
+   PB3 PB0 FP
+   PB2 PB1 FT
+```
+
+```
+74HC595
+QB  VCC
+QC   QA
+QD   SI 7D
+QE    G GND
+QF  RCK 7R
+QG  SCK 7C
+QH  SCL VCC
+GND QH'
 ```
 
 ```
