@@ -12,6 +12,8 @@
 - その他
     - PA0: RESET / UPDI
     - PA2: MISO (未使用)
+    - PB2: TxD
+    - PB3: RxD
 
 ```
 ATtiny404
@@ -21,8 +23,8 @@ ATtiny404
 i  PA5 PA2 x
 i  PA6 PA1 7D
 i  PA7 PA0 x
-   PB3 PB0 FP
-   PB2 PB1 FT
+Rx PB3 PB0 FP
+Tx PB2 PB1 FT
 ```
 
 ```
