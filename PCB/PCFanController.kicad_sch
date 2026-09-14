@@ -391,6 +391,129 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:USB_C_Receptacle_USB2.0_16P"
 			(pin_names
 				(offset 1.016)
@@ -3280,6 +3403,212 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Regulator_Switching:AP63203WU"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -7.62 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "AP63203WU"
+				(at 2.54 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+				(at 0 -22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "2A, 1.1MHz Buck DC/DC Converter, fixed 3.3V output voltage, TSOT-23-6"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "2A Buck DC/DC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TSOT?23*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "AP63203WU_0_1"
+				(rectangle
+					(start -7.62 5.08)
+					(end 7.62 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "AP63203WU_1_1"
+				(pin input line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "FB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "IN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 2.54 180)
+					(length 2.54)
+					(name "SW"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "BST"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Switch:SW_Push"
 			(pin_numbers
 				(hide yes)
@@ -3759,262 +4088,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "lib:PTPS561243DRLR"
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Value" "PTPS561243DRLR"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Footprint" "DRL0006A-MFG"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.ti.com/lit/gpn/tps561243"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "PTPS561243DRLR"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "DRL0006A-MFG"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "PTPS561243DRLR_0_1"
-				(polyline
-					(pts
-						(xy 5.08 5.08) (xy 5.08 -17.78)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 -17.78) (xy 25.4 -17.78)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 25.4 5.08) (xy 5.08 5.08)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 25.4 -17.78) (xy 25.4 5.08)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin power_in line
-					(at 0 0 0)
-					(length 5.08)
-					(name "VIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 30.48 0 180)
-					(length 5.08)
-					(name "SW"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 30.48 -15.24 180)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 30.48 -5.08 180)
-					(length 5.08)
-					(name "BST"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 0 -5.08 0)
-					(length 5.08)
-					(name "EN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 30.48 -10.16 180)
-					(length 5.08)
-					(name "FB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+3V3"
 			(power global)
 			(pin_numbers
@@ -4269,7 +4342,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:VCC"
+		(symbol "power:VBUS"
 			(power global)
 			(pin_numbers
 				(hide yes)
@@ -4294,7 +4367,7 @@
 					)
 				)
 			)
-			(property "Value" "VCC"
+			(property "Value" "VBUS"
 				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4326,7 +4399,7 @@
 					)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(property "Description" "Power symbol creates a global label with name \"VBUS\""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4348,7 +4421,7 @@
 					)
 				)
 			)
-			(symbol "VCC_0_1"
+			(symbol "VBUS_0_1"
 				(polyline
 					(pts
 						(xy -0.762 1.27) (xy 0 2.54)
@@ -4386,7 +4459,7 @@
 					)
 				)
 			)
-			(symbol "VCC_1_1"
+			(symbol "VBUS_1_1"
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
@@ -4410,16 +4483,16 @@
 		)
 	)
 	(junction
-		(at 170.18 124.46)
+		(at 171.45 126.365)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "22b25443-e9a8-42e5-b3a3-6a97053f98af")
+		(uuid "040fd180-9120-4a9d-9686-93108062d346")
 	)
 	(junction
-		(at 162.56 114.3)
+		(at 63.5 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "28b02a7e-eecd-4ab7-9c3a-c1d5ddf661c1")
+		(uuid "28389c0d-c32b-4853-b0fd-82c16477ee88")
 	)
 	(junction
 		(at 38.1 45.72)
@@ -4428,10 +4501,10 @@
 		(uuid "2e9de683-f12b-45e8-9deb-992b70ac18c1")
 	)
 	(junction
-		(at 162.56 124.46)
+		(at 135.89 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "3ab6e070-059f-4e14-a228-7a109477d45c")
+		(uuid "4aacf6b0-c109-4b21-ae0f-f8a4ba2d6c05")
 	)
 	(junction
 		(at 76.2 109.22)
@@ -4440,22 +4513,46 @@
 		(uuid "56ae86ec-5d1c-4f86-b54d-c1c8483f199e")
 	)
 	(junction
-		(at 177.8 124.46)
+		(at 63.5 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "812939ad-fb56-4847-abfc-649dcf081e4b")
+		(uuid "66f2fe8d-d83b-46ca-9f94-35b562c103fe")
 	)
 	(junction
-		(at 124.46 114.3)
+		(at 171.45 133.985)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b6e31a55-ebf8-46ac-9ef5-6effe2166d7f")
+		(uuid "8723f601-0893-4a11-a5e0-fbfdac22ac92")
 	)
 	(junction
-		(at 170.18 114.3)
+		(at 135.89 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e4db0b08-b7a3-402b-ba75-11a1a1316bd9")
+		(uuid "aaede305-31b4-4b74-b9c1-54c8c92fc003")
+	)
+	(junction
+		(at 171.45 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b370e69a-1e3a-46d4-a88e-7a3775a46774")
+	)
+	(junction
+		(at 171.45 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c0209f13-1b81-45b9-8e49-598f308ac123")
+	)
+	(junction
+		(at 58.42 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cd0a2a7b-5973-4d6e-972a-62496bda2de3")
+	)
+	(junction
+		(at 163.83 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "db145ce5-91ab-4356-843a-44bb2a310a26")
 	)
 	(no_connect
 		(at 53.34 127)
@@ -4511,6 +4608,16 @@
 	)
 	(wire
 		(pts
+			(xy 135.89 118.11) (xy 135.89 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04f1dfa6-d529-4d71-b564-173d998c6d41")
+	)
+	(wire
+		(pts
 			(xy 99.06 76.2) (xy 120.65 76.2)
 		)
 		(stroke
@@ -4521,23 +4628,13 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 124.46) (xy 170.18 124.46)
+			(xy 156.21 118.11) (xy 163.83 118.11)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0cc93e48-172c-4c14-a335-1675d471281e")
-	)
-	(wire
-		(pts
-			(xy 154.94 124.46) (xy 162.56 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11d07358-ec1f-47d4-adaa-0eacf4a5235d")
+		(uuid "0f3a8210-ef24-4542-952b-39fc47f9de2e")
 	)
 	(wire
 		(pts
@@ -4581,6 +4678,26 @@
 	)
 	(wire
 		(pts
+			(xy 163.83 133.985) (xy 171.45 133.985)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6344cf2f-84c2-4a72-9b4a-345ad46e7b1f")
+	)
+	(wire
+		(pts
+			(xy 58.42 133.35) (xy 63.5 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6518627b-6a43-4ca6-93de-0982493ee2f2")
+	)
+	(wire
+		(pts
 			(xy 58.42 124.46) (xy 66.04 124.46)
 		)
 		(stroke
@@ -4591,13 +4708,13 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 124.46) (xy 170.18 129.54)
+			(xy 171.45 126.365) (xy 163.83 126.365)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6f9f2fb6-b5d5-47b5-a7b3-dc4b3310330d")
+		(uuid "785cef36-c043-49c0-8019-deb40655e7fc")
 	)
 	(wire
 		(pts
@@ -4608,6 +4725,26 @@
 			(type default)
 		)
 		(uuid "8329faf5-328f-4909-a2b1-b2564b3accc0")
+	)
+	(wire
+		(pts
+			(xy 171.45 123.19) (xy 171.45 126.365)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9bac6e8d-0460-4545-9473-28bade3e64e4")
+	)
+	(wire
+		(pts
+			(xy 171.45 123.19) (xy 171.45 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ccd1cb0-ddc2-4217-b120-ffac850f70b0")
 	)
 	(wire
 		(pts
@@ -4641,16 +4778,6 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 114.3) (xy 162.56 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c8ce712e-f56c-45fc-9ce7-189a301a2a41")
-	)
-	(wire
-		(pts
 			(xy 63.5 111.76) (xy 63.5 119.38)
 		)
 		(stroke
@@ -4671,6 +4798,16 @@
 	)
 	(wire
 		(pts
+			(xy 58.42 125.73) (xy 58.42 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db27752a-8fc2-4de0-b438-d2a9e0a1de6e")
+	)
+	(wire
+		(pts
 			(xy 53.34 114.3) (xy 58.42 114.3)
 		)
 		(stroke
@@ -4678,6 +4815,16 @@
 			(type default)
 		)
 		(uuid "dececa07-975a-48c1-aebb-c497836af6e2")
+	)
+	(wire
+		(pts
+			(xy 163.83 118.11) (xy 163.83 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e70ba40d-1a27-4c0f-a803-0b08434cd1ed")
 	)
 	(wire
 		(pts
@@ -4711,23 +4858,23 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 124.46) (xy 177.8 129.54)
+			(xy 156.21 123.19) (xy 171.45 123.19)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fb0acc27-52b8-487b-804f-961a57f2660b")
+		(uuid "efd678ac-3b74-4099-b9ca-e32507d20b6b")
 	)
 	(wire
 		(pts
-			(xy 162.56 114.3) (xy 162.56 119.38)
+			(xy 63.5 119.38) (xy 63.5 125.73)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fff68906-a3f8-41be-8b85-32a623aa3213")
+		(uuid "f70c0f17-446c-43f6-8617-c37308f20244")
 	)
 	(label "7seg-E"
 		(at 106.68 60.96 0)
@@ -4818,6 +4965,16 @@
 			(justify right bottom)
 		)
 		(uuid "38dcdbfe-2d5f-4279-a0ce-32e65ef40146")
+	)
+	(label "TX"
+		(at 137.16 22.86 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "39cc61da-6bb8-4336-bb64-e19caf5d4ef7")
 	)
 	(label "7seg-P"
 		(at 200.66 73.66 180)
@@ -4979,6 +5136,16 @@
 		)
 		(uuid "788fdac4-9182-41fa-868d-fa2649820a22")
 	)
+	(label "RX"
+		(at 152.4 22.86 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7c239ca8-1d37-45ea-b231-abc98982c970")
+	)
 	(label "7seg-Clock"
 		(at 135.89 58.42 180)
 		(effects
@@ -5008,6 +5175,16 @@
 			(justify right bottom)
 		)
 		(uuid "87ef7f49-fe8f-415c-b3e2-41fdbdf33900")
+	)
+	(label "UPDI"
+		(at 123.19 22.86 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8e4d8cab-5d31-42b8-812a-cf88d0eaeda3")
 	)
 	(label "7seg-2"
 		(at 156.21 66.04 0)
@@ -5271,7 +5448,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "03fb1af4-0954-4d99-b840-ea1c39a4ae68")
-		(property "Reference" "U1"
+		(property "Reference" "U2"
 			(at 91.0433 45.72 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5377,7 +5554,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "U1")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -5415,7 +5592,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
 			(at 228.6 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -5538,85 +5715,6 @@
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
 					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 116.84 119.38 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "126596c4-6350-472c-88df-e0915875d6d9")
-		(property "Reference" "#PWR022"
-			(at 120.65 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC"
-			(at 113.03 119.3799 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 116.84 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 116.84 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 116.84 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2c44d744-bf4e-439e-a4e7-43a4216f3fe9")
-		)
-		(instances
-			(project "PCFanController"
-				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -5747,6 +5845,86 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:L")
+		(at 167.64 118.11 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "16d4ab89-ea76-40c2-9f8e-30381ec22d10")
+		(property "Reference" "L1"
+			(at 167.64 113.03 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3.9u"
+			(at 167.64 115.57 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_1210_3225Metric"
+			(at 167.64 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 167.64 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Inductor"
+			(at 167.64 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4d8e5659-9996-4e29-84c6-763918bcfa56")
+		)
+		(pin "2"
+			(uuid "eafa4bc2-a5b3-4e64-bed4-ad812c82aaf4")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 228.6 120.65 0)
 		(unit 1)
@@ -5778,7 +5956,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
 			(at 228.6 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -5827,6 +6005,164 @@
 		)
 	)
 	(symbol
+		(lib_id "power:VBUS")
+		(at 53.34 106.68 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1c700db3-161c-4a5b-a8f8-7c625ba52558")
+		(property "Reference" "#PWR018"
+			(at 49.53 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VBUS"
+			(at 57.15 106.6799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_QFP:TQFP-44_10x10mm_P0.8mm"
+			(at 53.34 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 53.34 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b1f0d2f7-e723-42f4-9412-607ed9de47e2")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 152.4 22.86 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "231f9456-1b19-4e6a-a1da-3ff0fb58ca6f")
+		(property "Reference" "TP5"
+			(at 154.94 18.2879 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 154.94 20.8279 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:TI_SO-PowerPAD-8_ThermalVias"
+			(at 157.48 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 152.4 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5bfcc6e9-0c5d-4c3b-9157-6bc59b9ee4a0")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "TP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 177.8 55.88 0)
 		(unit 1)
@@ -5838,7 +6174,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "26d46e42-2bbe-43c4-a60f-5eee90ed157e")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR08"
 			(at 177.8 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -5898,7 +6234,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR03")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -5916,7 +6252,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2f6b0412-af55-4fba-8249-d0674d094b45")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR04"
 			(at 24.13 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -5977,87 +6313,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR028")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 158.75 119.38 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2f93c6e7-6c04-4914-84c5-cc3971f3dff6")
-		(property "Reference" "C3"
-			(at 158.75 111.76 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0.1u"
-			(at 158.75 114.3 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 162.56 118.4148 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 158.75 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 158.75 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "95f45089-9065-4663-adc7-9367610b303c")
-		)
-		(pin "2"
-			(uuid "f6be62ba-7935-4c95-9323-5044c72b910a")
-		)
-		(instances
-			(project "PCFanController"
-				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "C3")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -6075,7 +6331,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "314a78f5-c03f-4d08-a0b4-d9262afaa849")
-		(property "Reference" "R10"
+		(property "Reference" "R9"
 			(at 78.74 104.1399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6139,7 +6395,86 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "R10")
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 137.16 22.86 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "330e7684-ee3d-4344-a04b-705d522bae43")
+		(property "Reference" "TP4"
+			(at 139.7 18.2879 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 139.7 20.8279 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:TI_SO-PowerPAD-8_ThermalVias"
+			(at 142.24 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 137.16 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "29d85474-6300-4cfb-9624-62bb80608353")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -6337,7 +6672,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
 			(at 228.6 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -6380,85 +6715,6 @@
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
 					(reference "SW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 170.18 114.3 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3f51f548-69b3-41e9-8177-8a7c8b6cbde9")
-		(property "Reference" "#PWR024"
-			(at 166.37 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 173.99 114.2999 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 170.18 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 170.18 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2c057f66-24c1-407e-98ef-4814ef75f1a3")
-		)
-		(instances
-			(project "PCFanController"
-				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -6704,6 +6960,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 109.22 22.86 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "428b2ad2-feec-4532-8f2a-30e622a207e9")
+		(property "Reference" "TP2"
+			(at 111.76 18.2879 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 111.76 20.8279 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:TI_SO-PowerPAD-8_ThermalVias"
+			(at 114.3 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 109.22 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9bcd111c-1b81-49fe-aacc-f695548142d7")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Interface_USB:CH221K")
 		(at 76.2 121.92 0)
 		(unit 1)
@@ -6715,7 +7050,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4a6575f6-a8d2-408b-9799-e3a9a8e7eeb0")
-		(property "Reference" "U4"
+		(property "Reference" "U6"
 			(at 78.3433 111.76 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6791,7 +7126,89 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "U4")
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 58.42 129.54 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4ba1dbb3-c0af-499a-aa6b-a6e2aa018e37")
+		(property "Reference" "R11"
+			(at 55.88 128.2699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 55.88 130.8099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 56.642 129.54 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 58.42 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6b18a930-040c-43f2-8535-5681b6b15116")
+		)
+		(pin "2"
+			(uuid "e7f2b1a8-5cf7-496d-896e-bd5172702560")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -6809,7 +7226,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4cb623b7-fcf0-4ad3-8f1e-dc481b6144dc")
-		(property "Reference" "U5"
+		(property "Reference" "U4"
 			(at 228.6 45.72 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6901,87 +7318,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "U5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 173.99 124.46 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5303604b-81f0-479a-9d49-000e12e01edd")
-		(property "Reference" "R13"
-			(at 173.99 118.11 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "135k"
-			(at 173.99 120.65 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 173.99 122.682 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 173.99 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 173.99 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5194d091-76f8-4f2f-a216-a472025570e9")
-		)
-		(pin "2"
-			(uuid "f96bdc40-93c3-445d-a4c9-0bed1de90e5f")
-		)
-		(instances
-			(project "PCFanController"
-				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "R13")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -7066,8 +7403,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 124.46 114.3 90)
+		(lib_id "Device:C")
+		(at 160.02 120.65 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7076,10 +7413,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "551f21d4-3631-4929-99c9-8cbd223ef780")
-		(property "Reference" "#PWR019"
-			(at 128.27 114.3 0)
-			(hide yes)
+		(uuid "562bdcb6-8541-45d1-a9b8-bce0c54fbab7")
+		(property "Reference" "C3"
+			(at 160.02 113.03 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7088,19 +7424,18 @@
 				)
 			)
 		)
-		(property "Value" "VCC"
-			(at 120.65 114.2999 90)
+		(property "Value" "100n"
+			(at 160.02 115.57 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 124.46 114.3 0)
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+			(at 163.83 119.6848 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7111,7 +7446,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 124.46 114.3 0)
+			(at 160.02 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7121,8 +7456,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 124.46 114.3 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 160.02 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7133,12 +7468,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "f2dc0687-82cd-4371-a429-877cb0c27f20")
+			(uuid "aaab0ab4-7af7-4161-95da-32e48c3a61aa")
+		)
+		(pin "2"
+			(uuid "ffb0cdc8-d50f-40e4-98ac-fe7722b20fd9")
 		)
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR019")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -7156,7 +7494,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5c1189a9-17bf-4287-ab55-8c705575c0d7")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR07"
 			(at 146.05 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -7216,7 +7554,85 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR09")
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 135.89 130.81 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "60021594-3f9e-4d01-a288-5b38a880b3df")
+		(property "Reference" "#PWR026"
+			(at 135.89 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 135.89 135.255 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 135.89 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "234e48fb-39ed-4690-b264-08f5dfaf32cb")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -7322,7 +7738,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "72a337be-7edf-4ead-88a7-462cf8853538")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR030"
 			(at 30.48 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -7382,15 +7798,15 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR016")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 177.8 124.46 270)
+		(lib_id "power:VBUS")
+		(at 135.89 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7399,9 +7815,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "7453ecf2-3fb3-4e3f-9952-0b4cb9232eff")
-		(property "Reference" "#PWR027"
-			(at 173.99 124.46 0)
+		(uuid "7b6a901e-64c2-411f-8443-150d5fa7a100")
+		(property "Reference" "#PWR021"
+			(at 135.89 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7411,19 +7827,18 @@
 				)
 			)
 		)
-		(property "Value" "+3V3"
-			(at 181.61 124.4599 90)
+		(property "Value" "VBUS"
+			(at 135.89 113.03 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 177.8 124.46 0)
+		(property "Footprint" "Package_QFP:TQFP-44_10x10mm_P0.8mm"
+			(at 135.89 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7434,7 +7849,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 177.8 124.46 0)
+			(at 135.89 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7444,86 +7859,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 177.8 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0e0360f9-686b-4b1e-9884-4b0c2788d40e")
-		)
-		(instances
-			(project "PCFanController"
-				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR027")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 170.18 106.68 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "78412bc2-4c13-42e2-a4f2-00473ce33daa")
-		(property "Reference" "#PWR025"
-			(at 170.18 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 170.18 101.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 170.18 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 170.18 106.68 0)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 135.89 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7534,12 +7871,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "d5a80986-1d46-475a-b230-da0d8973667c")
+			(uuid "10aeb7f6-0adf-483c-bb33-35879cbfd68f")
 		)
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR025")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -7557,7 +7894,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7dfa04e7-e68d-4eb1-a8e0-b6a23a887d0a")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR023"
 			(at 240.03 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -7618,7 +7955,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR030")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -7636,7 +7973,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7eb82fa6-c06a-435c-8557-4adee1c612cd")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR015"
 			(at 146.05 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -7696,15 +8033,15 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR012")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 154.94 129.54 0)
+		(lib_id "power:VBUS")
+		(at 177.8 43.18 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7713,9 +8050,87 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "8615f39d-d305-45f0-a545-da0129da7050")
-		(property "Reference" "#PWR023"
-			(at 154.94 135.89 0)
+		(uuid "80a4d670-af96-42aa-b82f-e8e48b0a0bfe")
+		(property "Reference" "#PWR03"
+			(at 177.8 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VBUS"
+			(at 177.8 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_QFP:TQFP-44_10x10mm_P0.8mm"
+			(at 177.8 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 177.8 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bfbba0ff-fa44-4801-94b5-3a7e71ee8476")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 95.25 22.86 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "82df608d-b6fe-4bee-9177-293b4e123076")
+		(property "Reference" "#PWR01"
+			(at 95.25 29.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7726,7 +8141,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 154.94 134.62 0)
+			(at 95.25 27.94 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7736,7 +8151,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 154.94 129.54 0)
+			(at 95.25 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7747,7 +8162,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.94 129.54 0)
+			(at 95.25 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7758,7 +8173,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 154.94 129.54 0)
+			(at 95.25 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7769,20 +8184,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "1fe44da9-583c-4980-8dfa-25f91a38d4a0")
+			(uuid "31afc7c3-b1cc-4c0f-ad0b-65e1241af777")
 		)
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR023")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 162.56 128.27 180)
+		(lib_id "power:+3V3")
+		(at 109.22 22.86 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7791,31 +8206,30 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "95b6b703-fb92-4561-ab16-f6deb2a2a921")
-		(property "Reference" "R12"
-			(at 165.1 126.9999 0)
+		(uuid "8552885a-c3e0-427d-be25-8c572ef3df18")
+		(property "Reference" "#PWR02"
+			(at 109.22 19.05 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "30k"
-			(at 165.1 129.5399 0)
+		(property "Value" "+3V3"
+			(at 109.22 27.94 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 164.338 128.27 90)
+		(property "Footprint" ""
+			(at 109.22 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7826,7 +8240,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 128.27 0)
+			(at 109.22 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7836,8 +8250,8 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 162.56 128.27 0)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 109.22 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7848,15 +8262,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "ab717815-4a36-46f4-9ee6-165a351cf0ea")
-		)
-		(pin "2"
-			(uuid "4f83e227-20cd-4abf-834f-7e2e9742def4")
+			(uuid "ee4daf39-fcbe-4125-9c39-2c8a0a494479")
 		)
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "R12")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -7874,7 +8285,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9982c528-7ffc-400a-97d2-b967c002d288")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR028"
 			(at 240.03 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -7935,15 +8346,15 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR031")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 53.34 106.68 270)
+		(lib_id "Device:C")
+		(at 171.45 130.175 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7952,31 +8363,31 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9c8a1422-c9fd-403a-b30a-fe6b8c4f66cc")
-		(property "Reference" "#PWR014"
-			(at 49.53 106.68 0)
-			(hide yes)
+		(uuid "9a16dada-f099-44db-a727-1efb7dc42983")
+		(property "Reference" "C6"
+			(at 175.2887 128.9049 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "VCC"
-			(at 57.15 106.6799 90)
+		(property "Value" "22u"
+			(at 175.2887 131.4449 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 53.34 106.68 0)
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+			(at 170.4848 126.365 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7987,7 +8398,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 106.68 0)
+			(at 171.45 130.175 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7997,8 +8408,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 53.34 106.68 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 171.45 130.175 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8009,12 +8420,176 @@
 			)
 		)
 		(pin "1"
-			(uuid "5128f919-f817-41f1-bffc-0815e6b88d7b")
+			(uuid "9f24b35c-1c15-4665-baf8-95e9e8282935")
+		)
+		(pin "2"
+			(uuid "7f10eacf-58ae-476a-be13-2a4b1aba7375")
 		)
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR014")
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 135.89 127 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9a45a4ac-8744-43e7-8c9c-a29e56ec2e90")
+		(property "Reference" "C4"
+			(at 132.715 125.7299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 132.715 128.2699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+			(at 134.9248 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 135.89 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "056b8f1a-f68f-4ec4-8570-bd4a166016b9")
+		)
+		(pin "2"
+			(uuid "75e5c9b9-dc46-41af-865c-66f60328a1e2")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 95.25 22.86 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1a63192-9089-4417-9636-9a7eb3362c52")
+		(property "Reference" "TP1"
+			(at 97.79 18.2879 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 97.79 20.8279 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:TI_SO-PowerPAD-8_ThermalVias"
+			(at 100.33 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 95.25 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c87b4b1a-db37-48a8-9de4-6e5a4de72a4e")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -8054,7 +8629,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_LCC:PLCC-84_29.3x29.3mm_P1.27mm"
+		(property "Footprint" "Connector:FanPinHeader_1x04_P2.54mm_Vertical"
 			(at 177.8 50.546 0)
 			(hide yes)
 			(show_name no)
@@ -8109,8 +8684,100 @@
 		)
 	)
 	(symbol
+		(lib_id "Regulator_Switching:AP63203WU")
+		(at 146.05 120.65 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a56c34ea-f84a-4998-af4f-419ce9349f5f")
+		(property "Reference" "U5"
+			(at 146.05 110.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AP63203WU"
+			(at 146.05 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+			(at 146.05 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf"
+			(at 146.05 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "2A, 1.1MHz Buck DC/DC Converter, fixed 3.3V output voltage, TSOT-23-6"
+			(at 146.05 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "fa827500-88ef-4a37-953f-160cad4888ae")
+		)
+		(pin "5"
+			(uuid "6ac981df-3f20-4d2c-82a7-04accc2e0f30")
+		)
+		(pin "2"
+			(uuid "ae74c6bd-233f-494d-9287-26e3e89646fd")
+		)
+		(pin "6"
+			(uuid "1a852a59-cc3b-4aac-8c80-5684bcb2e513")
+		)
+		(pin "4"
+			(uuid "1e5598d4-9cc3-4f70-a92a-44147ef28fff")
+		)
+		(pin "1"
+			(uuid "02881317-5dac-4193-aeba-42926ef8158e")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
-		(at 173.99 129.54 90)
+		(at 163.83 130.175 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -8119,29 +8786,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "ab4f6bdb-04ac-484b-8a5c-14f8c9df3fdf")
+		(uuid "aadd9093-5b0d-49e6-8ca8-1d32096c4018")
 		(property "Reference" "C5"
-			(at 173.99 137.16 90)
+			(at 159.9913 128.9049 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "47p"
-			(at 173.99 134.62 90)
+		(property "Value" "22u"
+			(at 159.9913 131.4449 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 177.8 130.5052 0)
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+			(at 164.7952 126.365 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8152,7 +8821,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.99 129.54 0)
+			(at 163.83 130.175 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8163,7 +8832,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 173.99 129.54 0)
+			(at 163.83 130.175 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8174,15 +8843,94 @@
 			)
 		)
 		(pin "1"
-			(uuid "8ff026e0-04b0-4933-bf46-55b549ec7cd6")
+			(uuid "9312e8c4-2d30-421e-8127-cee17ef79c07")
 		)
 		(pin "2"
-			(uuid "1984d483-702d-4b58-aede-a05b21c73983")
+			(uuid "88c24148-7b46-4ae3-beff-84e28cb013ac")
 		)
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
 					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 123.19 22.86 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ab8fa4bf-f502-4f6e-bcb4-c0e00ac5a0ef")
+		(property "Reference" "TP3"
+			(at 125.73 18.2879 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 125.73 20.8279 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:TI_SO-PowerPAD-8_ThermalVias"
+			(at 128.27 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 123.19 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "915497d6-ef7e-461c-86c9-adc2b098227f")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -8200,7 +8948,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ad405d31-c831-4de1-8ad2-a7588346adeb")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR014"
 			(at 88.9 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -8260,7 +9008,88 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR02")
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 63.5 129.54 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "aea9f9dd-a964-4d69-9d27-78b0d1a1d4fb")
+		(property "Reference" "R12"
+			(at 66.04 128.2699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 66.04 130.8099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 65.278 129.54 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 63.5 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "50e46d7d-6d0c-45a8-9207-98af9b15d9fa")
+		)
+		(pin "2"
+			(uuid "eccf6d53-5a8e-45fb-be2a-e8c01bab2da7")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -8278,7 +9107,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "af67aecb-26f7-4669-b516-5b1848a8db6e")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR012"
 			(at 129.54 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -8339,7 +9168,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR011")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -8357,7 +9186,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b09d9744-7dfd-4ea1-b74a-a7bf724ead90")
-		(property "Reference" "C1"
+		(property "Reference" "C2"
 			(at 72.39 101.6 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8419,15 +9248,15 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "C1")
+					(reference "C2")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "lib:PTPS561243DRLR")
-		(at 124.46 114.3 0)
+		(lib_id "power:VBUS")
+		(at 76.2 101.6 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8436,53 +9265,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "b228d294-9075-487a-8c89-58e6beb26c15")
-		(property "Reference" "U6"
-			(at 139.7 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "PTPS561243DRLR"
-			(at 139.7 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "footprints:DRL0006A-MFG"
-			(at 124.46 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/gpn/tps561243"
-			(at 124.46 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 124.46 114.3 0)
+		(uuid "b2bd192d-2f25-4c24-8ce4-289e1d4f2d97")
+		(property "Reference" "#PWR017"
+			(at 76.2 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8492,28 +9277,56 @@
 				)
 			)
 		)
-		(pin "5"
-			(uuid "f7f01226-b91e-46e5-8f61-5ca0d2450719")
+		(property "Value" "VBUS"
+			(at 76.2 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(pin "3"
-			(uuid "e624be50-203f-4e20-bef7-c66d1cf85246")
+		(property "Footprint" "Package_QFP:TQFP-44_10x10mm_P0.8mm"
+			(at 76.2 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 76.2 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
 		(pin "1"
-			(uuid "8873e3da-9dbe-4d10-ac75-36420e20139e")
-		)
-		(pin "4"
-			(uuid "5acb3b1b-a89e-48fc-a1eb-32a210632e92")
-		)
-		(pin "6"
-			(uuid "63c8a428-c408-42e9-ac67-6bd9ea90e607")
-		)
-		(pin "2"
-			(uuid "0a30be1b-3948-4d38-b947-fd35bb7b8a5e")
+			(uuid "35def67a-90f6-461f-bf46-94fd362353f2")
 		)
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "U6")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -8531,7 +9344,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b2c1b560-4751-4e46-9590-927ff4f2c390")
-		(property "Reference" "R9"
+		(property "Reference" "R10"
 			(at 90.17 118.11 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8593,88 +9406,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 170.18 110.49 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b689e01e-6377-48a0-981b-cbe0038756b5")
-		(property "Reference" "C4"
-			(at 173.99 109.2199 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "22u"
-			(at 173.99 111.7599 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 171.1452 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 170.18 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "89c56f82-f050-4b29-a980-bf70f44ac9ee")
-		)
-		(pin "2"
-			(uuid "d925e4f5-83ea-4006-9429-6c8f8e929558")
-		)
-		(instances
-			(project "PCFanController"
-				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "C4")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -8772,7 +9504,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb375aff-46fe-4a8a-aa57-c4ada27c865a")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR016"
 			(at 180.34 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -8832,7 +9564,86 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR04")
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 171.45 118.11 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bece6c80-5eb9-4022-98ef-3371821896e6")
+		(property "Reference" "#PWR022"
+			(at 167.64 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 175.26 118.1099 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 171.45 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 171.45 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 171.45 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "894a3ff7-aca8-49f9-8a04-12565e7c1be2")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -8850,7 +9661,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c5fb461d-0c30-4fbd-a882-1ea1a37f4854")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR09"
 			(at 82.55 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -8911,7 +9722,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR08")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -9009,7 +9820,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c70939fa-158e-40b8-a956-385983de9ceb")
-		(property "Reference" "C6"
+		(property "Reference" "C1"
 			(at 34.29 38.1 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9019,7 +9830,7 @@
 				)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "0.1u"
 			(at 34.29 40.64 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9071,7 +9882,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "C6")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -9089,7 +9900,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c7b350f2-91d8-4e30-937c-2d0260ec0cdf")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR025"
 			(at 76.2 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -9149,85 +9960,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR018")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 124.46 106.68 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c988f4be-46af-4dbf-bcb9-80cb781321cd")
-		(property "Reference" "#PWR021"
-			(at 124.46 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 124.46 101.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 124.46 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 124.46 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 124.46 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c3eafe1f-3a1c-4835-aa94-4564915cf7af")
-		)
-		(instances
-			(project "PCFanController"
-				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR021")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -9245,7 +9978,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cabf82c7-c814-490c-a81c-4bb9bd1a846c")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR013"
 			(at 38.1 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -9305,7 +10038,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR01")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -9323,7 +10056,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cc081e14-ada4-4454-a23f-03eeb66a4338")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR019"
 			(at 240.03 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -9384,7 +10117,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR029")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -9402,7 +10135,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cc3da1b4-0382-42dd-b05c-2e97e2d16f60")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR011"
 			(at 72.39 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -9463,7 +10196,85 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR07")
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 146.05 128.27 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cddbc611-bbfd-43c0-b566-87fce95cabad")
+		(property "Reference" "#PWR024"
+			(at 146.05 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 146.05 132.715 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 146.05 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 146.05 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "29f7b2f3-a515-477c-9e3c-37c59f97162a")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -9501,7 +10312,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:Texas_X2QFN-12_1.6x1.6mm_P0.4mm"
+		(property "Footprint" "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
 			(at 41.91 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -9606,7 +10417,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf56ba6c-8857-4231-99a0-3a7adb3b9169")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR031"
 			(at 38.1 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -9666,16 +10477,15 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR015")
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 120.65 119.38 90)
-		(mirror x)
+		(lib_id "power:GND")
+		(at 63.5 133.35 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9683,9 +10493,11 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "d01410e7-f072-473c-b7bf-49f6f360b35c")
-		(property "Reference" "R11"
-			(at 120.65 125.73 90)
+		(fields_autoplaced yes)
+		(uuid "d057aa7e-4160-48fe-82d2-d3ea0dd6b494")
+		(property "Reference" "#PWR027"
+			(at 63.5 139.7 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9694,8 +10506,8 @@
 				)
 			)
 		)
-		(property "Value" "100k"
-			(at 120.65 123.19 90)
+		(property "Value" "GND"
+			(at 63.5 138.43 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9704,8 +10516,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 120.65 117.602 90)
+		(property "Footprint" ""
+			(at 63.5 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9716,7 +10528,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 120.65 119.38 0)
+			(at 63.5 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9726,8 +10538,8 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 120.65 119.38 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 63.5 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9738,15 +10550,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "4cb21460-6c55-4d68-bce3-9af0f97fc7f7")
-		)
-		(pin "2"
-			(uuid "ec8faa0e-ba2b-4220-bdab-13374e017aad")
+			(uuid "0d6dffae-1308-4467-bbfe-277fdec52ead")
 		)
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "R11")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -9831,166 +10640,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 124.46 110.49 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d3d69050-ce99-425c-af2d-50bf66263247")
-		(property "Reference" "C2"
-			(at 120.65 109.2199 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 120.65 111.7599 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 123.4948 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 124.46 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 124.46 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "741c91cc-401c-4765-bd8c-1030fb5bf9d2")
-		)
-		(pin "2"
-			(uuid "5c2d9ac8-7834-445a-86dd-4673af66f3ae")
-		)
-		(instances
-			(project "PCFanController"
-				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 177.8 43.18 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d7791cd0-1248-4896-872e-4cee772b7b52")
-		(property "Reference" "#PWR013"
-			(at 177.8 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC"
-			(at 177.8 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 177.8 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 177.8 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 177.8 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a47042f9-95b7-4330-97c4-25c0876b8f7c")
-		)
-		(instances
-			(project "PCFanController"
-				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR013")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "MCU_Microchip_ATtiny:ATtiny404-SS")
 		(at 38.1 63.5 0)
 		(unit 1)
@@ -10002,7 +10651,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e0f21b7a-8d8d-426c-8a03-bba0ef3e9e4f")
-		(property "Reference" "U2"
+		(property "Reference" "U1"
 			(at 40.2433 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10103,7 +10752,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "U2")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -10111,7 +10760,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 162.56 132.08 0)
+		(at 171.45 133.985 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10120,9 +10769,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "e6d415ce-66b9-4498-99e7-78b4c2dc868d")
-		(property "Reference" "#PWR026"
-			(at 162.56 138.43 0)
+		(uuid "e598c0c6-9b50-4012-acb5-2fcc27decad5")
+		(property "Reference" "#PWR029"
+			(at 171.45 140.335 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10133,7 +10782,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 162.56 137.16 0)
+			(at 171.45 138.43 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10143,7 +10792,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 162.56 132.08 0)
+			(at 171.45 133.985 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10154,7 +10803,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 132.08 0)
+			(at 171.45 133.985 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10165,7 +10814,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 162.56 132.08 0)
+			(at 171.45 133.985 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10176,12 +10825,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "ad1b39cd-77e9-437a-bec3-893b5cc35d1f")
+			(uuid "0586fc37-c42b-4614-826e-5c731968f899")
 		)
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR026")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -10261,163 +10910,6 @@
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
 					(reference "#PWR020")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:L")
-		(at 166.37 114.3 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "eee0f125-7d2d-4dfa-baab-1ba271005a6d")
-		(property "Reference" "L1"
-			(at 166.37 109.22 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1.2u"
-			(at 166.37 111.76 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 166.37 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 166.37 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Inductor"
-			(at 166.37 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "1ef84b3f-3bad-409a-92df-7fac358627d0")
-		)
-		(pin "1"
-			(uuid "51111f3a-7328-41ef-a597-dc5b9d5c5555")
-		)
-		(instances
-			(project "PCFanController"
-				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "L1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 76.2 101.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f06c7d14-9ec5-4ed2-beb7-8b4e4cbd3d3f")
-		(property "Reference" "#PWR017"
-			(at 76.2 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC"
-			(at 76.2 96.52 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 76.2 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 76.2 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 76.2 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "42d1f18e-aef5-4357-99f7-88e5187648b7")
-		)
-		(instances
-			(project "PCFanController"
-				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR017")
 					(unit 1)
 				)
 			)
