@@ -11,6 +11,7 @@ constexpr uint16_t LED_ENABLE_CLOCKS = PWM_PERIOD_CLOCKS / 2;
 constexpr uint32_t CLK_TICKS_PER_MIN = F_CPU / PWM_PERIOD_CLOCKS * 60;
 constexpr uint32_t TIMEOUT_TICKS = CLK_TICKS_PER_MIN / MIN_RPM / 2;
 constexpr uint8_t LED_TICKS_PER_DIGIT = 64; // 1桁391Hz、4桁98Hz
+constexpr uint16_t BUTTON_DEBOUNCE_TICKS = 2500; // てきとー 0.1s
 
 enum MODE : uint8_t {
     MODE_OFF,
@@ -40,6 +41,7 @@ volatile uint16_t time = 0;
 volatile uint16_t lastPulse = 0;
 volatile uint16_t pulseWidth = 0;
 volatile bool ledUpdateFlag = true;
+volatile uint16_t buttonDebounceTicks = 0;
 
 volatile uint8_t power = 100;
 volatile MODE mode = MODE_RPM;
@@ -137,6 +139,12 @@ int main() {
 }
 
 ISR(PORTA_PORT_vect) {
+    if (buttonDebounceTicks > 0) {
+        PORTA.INTFLAGS = PIN5_bm | PIN6_bm | PIN7_bm;
+        return;
+    }
+    buttonDebounceTicks = BUTTON_DEBOUNCE_TICKS;
+
     if (PORTA.INTFLAGS & PIN5_bm) {
         PORTA.INTFLAGS = PIN5_bm;
         power = power + POWER_STEP;
@@ -177,5 +185,8 @@ ISR(TCA0_OVF_vect) {
     }
     if (time == lastPulse + TIMEOUT_TICKS) {
         pulseWidth = 0;
+    }
+    if (buttonDebounceTicks > 0) {
+        buttonDebounceTicks--;
     }
 }
