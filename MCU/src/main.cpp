@@ -159,6 +159,7 @@ ISR(PORTA_PORT_vect) {
             TCA0.SINGLE.CMP0 = LED_ENABLE_CLOCKS;
         }
     }
+    TCA0.SINGLE.CMP1 = PWM_PERIOD_CLOCKS * power / 100;
 }
 
 ISR(PORTB_PORT_vect) {
