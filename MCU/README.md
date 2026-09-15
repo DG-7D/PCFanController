@@ -23,8 +23,8 @@ ATtiny404
 i  PA5 PA2 x
 i  PA6 PA1 7D
 i  PA7 PA0 x
-Rx PB3 PB0 FT
-7E PB2 PB1 FP
+7E PB3 PB0 FT
+Tx PB2 PB1 FP
 ```
 
 ```
