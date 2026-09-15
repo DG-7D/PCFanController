@@ -4876,6 +4876,16 @@
 		)
 		(uuid "00a3f400-80c4-4b93-8bd5-5b1ab90d6ab7")
 	)
+	(label "Tach"
+		(at 22.86 53.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "02b4d079-dec9-45e5-93ec-92a87aa38728")
+	)
 	(label "7seg-3"
 		(at 156.21 63.5 0)
 		(effects
@@ -4917,14 +4927,14 @@
 		(uuid "16f87756-1ff8-4eed-9723-271e1397b732")
 	)
 	(label "PWM"
-		(at 22.86 53.34 180)
+		(at 22.86 55.88 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "23603685-0c2a-4d91-b6d3-f24f116adbb3")
+		(uuid "26bde5cf-1c63-4dfb-b857-20eebaa7ac8c")
 	)
 	(label "7seg-Clock"
 		(at 53.34 60.96 0)
@@ -4935,6 +4945,16 @@
 			(justify left bottom)
 		)
 		(uuid "2a3b0162-8d60-4140-a400-f65cb297497f")
+	)
+	(label "7seg-En"
+		(at 135.89 68.58 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2b4f246d-5a89-4719-8e0f-4b83390a54ed")
 	)
 	(label "TX"
 		(at 22.86 58.42 180)
@@ -5026,7 +5046,7 @@
 		)
 		(uuid "4fb3d03b-c149-445b-843a-e9221c82c3c7")
 	)
-	(label "RX"
+	(label "7seg-En"
 		(at 22.86 60.96 180)
 		(effects
 			(font
@@ -5076,16 +5096,6 @@
 		)
 		(uuid "5e5c47ca-84ee-4a65-931d-303810cbd885")
 	)
-	(label "Tach"
-		(at 22.86 55.88 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "60355106-0b40-455d-92ce-a1063ca599ec")
-	)
 	(label "7seg-C"
 		(at 200.66 60.96 180)
 		(effects
@@ -5116,16 +5126,6 @@
 		)
 		(uuid "788fdac4-9182-41fa-868d-fa2649820a22")
 	)
-	(label "RX"
-		(at 107.95 26.67 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "7c239ca8-1d37-45ea-b231-abc98982c970")
-	)
 	(label "7seg-Clock"
 		(at 135.89 58.42 180)
 		(effects
@@ -5155,6 +5155,16 @@
 			(justify right bottom)
 		)
 		(uuid "87ef7f49-fe8f-415c-b3e2-41fdbdf33900")
+	)
+	(label "7seg-En"
+		(at 78.74 68.58 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "89a0ae82-4555-49c5-9578-156d9871b12c")
 	)
 	(label "UPDI"
 		(at 50.8 26.67 270)
@@ -6137,85 +6147,6 @@
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
 					(reference "TP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 107.95 26.67 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "231f9456-1b19-4e6a-a1da-3ff0fb58ca6f")
-		(property "Reference" "TP7"
-			(at 110.49 22.0979 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 110.49 24.6379 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SO:TI_SO-PowerPAD-8_ThermalVias"
-			(at 113.03 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 113.03 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 107.95 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5bfcc6e9-0c5d-4c3b-9157-6bc59b9ee4a0")
-		)
-		(instances
-			(project "PCFanController"
-				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -9390,85 +9321,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 135.89 68.58 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "af67aecb-26f7-4669-b516-5b1848a8db6e")
-		(property "Reference" "#PWR014"
-			(at 129.54 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 132.08 68.5799 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 135.89 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 135.89 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 135.89 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ac9589ea-23ff-43ba-bfb0-526a685bb055")
-		)
-		(instances
-			(project "PCFanController"
-				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR014")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 80.01 109.22 90)
 		(unit 1)
@@ -10412,85 +10264,6 @@
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
 					(reference "#PWR021")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 78.74 68.58 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cc3da1b4-0382-42dd-b05c-2e97e2d16f60")
-		(property "Reference" "#PWR013"
-			(at 72.39 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 74.93 68.5799 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 78.74 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 78.74 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 78.74 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ed38431c-0e0d-47ee-b400-c82ab0ff8d70")
-		)
-		(instances
-			(project "PCFanController"
-				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR013")
 					(unit 1)
 				)
 			)

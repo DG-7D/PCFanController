@@ -6,6 +6,7 @@
     - PA1: データ出力
     - PA3: クロック出力
     - PA4: ラッチ出力
+    - PB3: 有効出力 (Active Low)
 - ファン
     - PB0: 回転数パルス入力
     - PB1: PWM出力
@@ -13,7 +14,6 @@
     - PA0: RESET / UPDI
     - PA2: MISO (未使用)
     - PB2: TxD
-    - PB3: RxD
 
 ```
 ATtiny404
@@ -24,7 +24,7 @@ i  PA5 PA2 x
 i  PA6 PA1 7D
 i  PA7 PA0 x
 Rx PB3 PB0 FT
-Tx PB2 PB1 FP
+7E PB2 PB1 FP
 ```
 
 ```
