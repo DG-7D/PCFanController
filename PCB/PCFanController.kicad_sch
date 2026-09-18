@@ -6245,7 +6245,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:TI_SO-PowerPAD-8_ThermalVias"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
 			(at 30.48 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -6563,7 +6563,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:TI_SO-PowerPAD-8_ThermalVias"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
 			(at 100.33 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -7121,7 +7121,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:TI_SO-PowerPAD-8_ThermalVias"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
 			(at 74.93 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -7292,7 +7292,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 232.41 145.0848 0)
 			(hide yes)
 			(show_name no)
@@ -7560,7 +7560,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 144.78 119.6848 0)
 			(hide yes)
 			(show_name no)
@@ -7874,7 +7874,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 232.41 126.0348 0)
 			(hide yes)
 			(show_name no)
@@ -8591,7 +8591,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:TI_SO-PowerPAD-8_ThermalVias"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
 			(at 87.63 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -8912,7 +8912,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 151.4348 126.365 0)
 			(hide yes)
 			(show_name no)
@@ -8994,7 +8994,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 115.8748 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -9076,7 +9076,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:TI_SO-PowerPAD-8_ThermalVias"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
 			(at 43.18 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -9413,7 +9413,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 145.7452 126.365 0)
 			(hide yes)
 			(show_name no)
@@ -9495,7 +9495,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:TI_SO-PowerPAD-8_ThermalVias"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
 			(at 55.88 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -10204,7 +10204,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 232.41 106.9848 0)
 			(hide yes)
 			(show_name no)
