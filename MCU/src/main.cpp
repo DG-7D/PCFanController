@@ -11,7 +11,7 @@ constexpr uint16_t LED_ENABLE_CLOCKS = PWM_PERIOD_CLOCKS / 2;
 constexpr uint32_t CLK_TICKS_PER_MIN = F_CPU / PWM_PERIOD_CLOCKS * 60;
 constexpr uint32_t TIMEOUT_TICKS = CLK_TICKS_PER_MIN / MIN_RPM / 2;
 constexpr uint8_t LED_TICKS_PER_DIGIT = 64; // 1桁391Hz、4桁98Hz
-constexpr uint16_t BUTTON_DEBOUNCE_TICKS = 2500; // てきとー 0.1s
+constexpr uint8_t BUTTON_DEBOUNCE_TICKS = 250; // てきとー 0.01s
 
 enum MODE : uint8_t {
     MODE_OFF,
@@ -41,7 +41,8 @@ volatile uint16_t time = 0;
 volatile uint16_t lastPulse = 0;
 volatile uint16_t pulseWidth = 0;
 volatile bool ledUpdateFlag = true;
-volatile uint16_t buttonDebounceTicks = 0;
+volatile uint8_t buttonDebounceTicks = 0;
+volatile uint8_t lastButtonState = 0;
 
 volatile uint8_t power = 100;
 volatile MODE mode = MODE_RPM;
@@ -139,35 +140,9 @@ int main() {
 }
 
 ISR(PORTA_PORT_vect) {
-    if (buttonDebounceTicks > 0) {
-        PORTA.INTFLAGS = PIN5_bm | PIN6_bm | PIN7_bm;
-        return;
-    }
+    PORTA.INTFLAGS = PIN5_bm | PIN6_bm | PIN7_bm;
+    lastButtonState = PORTA.IN & (PIN5_bm | PIN6_bm | PIN7_bm);
     buttonDebounceTicks = BUTTON_DEBOUNCE_TICKS;
-
-    if (PORTA.INTFLAGS & PIN5_bm) {
-        PORTA.INTFLAGS = PIN5_bm;
-        power = power + POWER_STEP;
-        if (power > 100) {
-            power = 100;
-        }
-    } else if (PORTA.INTFLAGS & PIN6_bm) {
-        PORTA.INTFLAGS = PIN6_bm;
-        power = power - POWER_STEP;
-        if (power > 100) {
-            power = 0;
-        }
-    } else if (PORTA.INTFLAGS & PIN7_bm) {
-        PORTA.INTFLAGS = PIN7_bm;
-        mode = (MODE)(mode + 1);
-        if (mode == MODE_COUNT) {
-            mode = MODE_OFF;
-            TCA0.SINGLE.CMP0 = PWM_PERIOD_CLOCKS;
-        } else {
-            TCA0.SINGLE.CMP0 = LED_ENABLE_CLOCKS;
-        }
-    }
-    TCA0.SINGLE.CMP1 = PWM_PERIOD_CLOCKS * power / 100;
 }
 
 ISR(PORTB_PORT_vect) {
@@ -188,5 +163,30 @@ ISR(TCA0_OVF_vect) {
     }
     if (buttonDebounceTicks > 0) {
         buttonDebounceTicks--;
+
+        if (buttonDebounceTicks == 0 && (PORTA.IN & (PIN5_bm | PIN6_bm | PIN7_bm)) == lastButtonState) {
+            if (!(lastButtonState & PIN5_bm)) {
+                if (power <= 100 - POWER_STEP) {
+                    power = power + POWER_STEP;
+                } else {
+                    power = 100;
+                }
+            } else if (!(lastButtonState & PIN6_bm)) {
+                if (POWER_STEP <= power) {
+                    power = power - POWER_STEP;
+                } else {
+                    power = 0;
+                }
+            } else if (!(lastButtonState & PIN7_bm)) {
+                if (mode != MODE_COUNT - 1) {
+                    mode = (MODE)(mode + 1);
+                    TCA0.SINGLE.CMP0 = LED_ENABLE_CLOCKS;
+                } else {
+                    mode = MODE_OFF;
+                    TCA0.SINGLE.CMP0 = PWM_PERIOD_CLOCKS;
+                }
+            }
+            TCA0.SINGLE.CMP1 = PWM_PERIOD_CLOCKS * power / 100;
+        }
     }
 }
