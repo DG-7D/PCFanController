@@ -4994,16 +4994,6 @@
 		)
 		(uuid "efd678ac-3b74-4099-b9ca-e32507d20b6b")
 	)
-	(label "7seg-E"
-		(at 106.68 60.96 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "001da16a-3d48-46ab-9aa4-e2bd8f188318")
-	)
 	(label "7seg-1"
 		(at 256.54 71.12 0)
 		(effects
@@ -5044,16 +5034,6 @@
 		)
 		(uuid "0fb3f1bb-f478-4af5-8051-8dfc75033418")
 	)
-	(label "Ctrl-A"
-		(at 53.34 66.04 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "10cc8978-09c0-4aac-b59d-c25050d08543")
-	)
 	(label "7seg-A"
 		(at 200.66 55.88 180)
 		(effects
@@ -5063,6 +5043,16 @@
 			(justify right bottom)
 		)
 		(uuid "16f87756-1ff8-4eed-9723-271e1397b732")
+	)
+	(label "Button-Disp"
+		(at 223.52 101.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2330127a-0365-4f6e-98d7-5ac97a6b0583")
 	)
 	(label "PWM"
 		(at 22.86 55.88 180)
@@ -5093,6 +5083,36 @@
 			(justify right bottom)
 		)
 		(uuid "2b4f246d-5a89-4719-8e0f-4b83390a54ed")
+	)
+	(label "7seg-E"
+		(at 106.68 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "32197f39-109b-4ddf-96bb-9cd7143c89f9")
+	)
+	(label "Button-Plus"
+		(at 223.52 120.65 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "33d7a6f1-a58b-4d3a-8bb1-4aed048f79a3")
+	)
+	(label "7seg-C"
+		(at 106.68 68.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "362e9866-a60d-47b0-a03a-107b92612b7e")
 	)
 	(label "TX"
 		(at 22.86 58.42 180)
@@ -5134,6 +5154,16 @@
 		)
 		(uuid "3c1e2759-55dc-48d0-9aee-e1888d2e6d06")
 	)
+	(label "7seg-P"
+		(at 106.68 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3f174c83-ec2b-4324-a1fe-e2b9e2bb78f6")
+	)
 	(label "7seg-1"
 		(at 156.21 68.58 0)
 		(effects
@@ -5153,26 +5183,6 @@
 			(justify right bottom)
 		)
 		(uuid "4824e932-7d85-4011-a0c4-6586b6db91b9")
-	)
-	(label "7seg-A"
-		(at 106.68 71.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "494e5729-01be-47c8-8c52-b68d15164b3b")
-	)
-	(label "7seg-G"
-		(at 106.68 55.88 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4ce43782-8a70-4cc5-86f0-d03d54179a25")
 	)
 	(label "Tach"
 		(at 167.64 48.26 180)
@@ -5224,16 +5234,6 @@
 		)
 		(uuid "5b293189-e5d2-46b6-8ced-cfe01ca70160")
 	)
-	(label "Ctrl-B"
-		(at 53.34 68.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5e5c47ca-84ee-4a65-931d-303810cbd885")
-	)
 	(label "7seg-C"
 		(at 200.66 60.96 180)
 		(effects
@@ -5254,15 +5254,15 @@
 		)
 		(uuid "6ca83bd0-1dbb-400f-9eb6-6f403d017a6b")
 	)
-	(label "7seg-D"
-		(at 106.68 63.5 0)
+	(label "Button-Minus"
+		(at 223.52 139.7 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "788fdac4-9182-41fa-868d-fa2649820a22")
+		(uuid "78b72ec9-b31c-4569-bf45-f6b85dc933cb")
 	)
 	(label "7seg-Clock"
 		(at 135.89 58.42 180)
@@ -5274,15 +5274,15 @@
 		)
 		(uuid "7eaab7b8-6368-4374-866e-341df76837ce")
 	)
-	(label "Ctrl-Push"
-		(at 223.52 139.7 180)
+	(label "7seg-A"
+		(at 106.68 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "87b0e163-977d-4649-9adc-e063e0b7b033")
+		(uuid "7f629a47-fd45-487a-8deb-03c65a48c08c")
 	)
 	(label "7seg-D"
 		(at 200.66 63.5 180)
@@ -5334,7 +5334,17 @@
 		)
 		(uuid "96b80429-1f28-401a-aa02-92eda3a29445")
 	)
-	(label "Ctrl-Push"
+	(label "Button-Minus"
+		(at 53.34 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "96e59180-4752-43d4-8b29-e1e1f1ac003a")
+	)
+	(label "Button-Disp"
 		(at 53.34 71.12 0)
 		(effects
 			(font
@@ -5342,27 +5352,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9870b6bf-5f07-4557-b67c-e8170fcd5a46")
-	)
-	(label "7seg-B"
-		(at 106.68 68.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9f066caa-2ca8-4a4f-8b19-76bdf06ba294")
-	)
-	(label "Ctrl-A"
-		(at 223.52 101.6 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "aa93271c-4599-4982-b613-7fd9f586c43c")
+		(uuid "aac589df-2822-4bdd-97f3-4e42416ee0af")
 	)
 	(label "7seg-Clock"
 		(at 78.74 58.42 180)
@@ -5384,15 +5374,35 @@
 		)
 		(uuid "b7a452f8-cecc-4188-8e32-d2b7066fab9d")
 	)
-	(label "7seg-F"
-		(at 106.68 58.42 0)
+	(label "Button-Plus"
+		(at 53.34 68.58 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "bc5e9233-b569-4014-8395-1764b90c6b06")
+		(uuid "c0c37c09-d0ac-4ad4-b5af-60379b06adf0")
+	)
+	(label "7seg-G"
+		(at 106.68 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c574e200-8e25-446b-937b-841c9ccb41fe")
+	)
+	(label "7seg-B"
+		(at 106.68 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c59178f3-7a2e-4294-9bda-1dd0f9b1779b")
 	)
 	(label "7seg-F"
 		(at 200.66 68.58 180)
@@ -5414,26 +5424,6 @@
 		)
 		(uuid "c7ea9304-49e3-4773-8fb2-1993e8250d71")
 	)
-	(label "7seg-C"
-		(at 106.68 66.04 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "cb499558-2273-4062-92fe-b016f51e9d1a")
-	)
-	(label "Ctrl-B"
-		(at 223.52 120.65 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d00f0d45-76f7-4b46-bf8e-cb84e6138176")
-	)
 	(label "7seg-E"
 		(at 200.66 66.04 180)
 		(effects
@@ -5454,15 +5444,25 @@
 		)
 		(uuid "d38e4c60-64ab-4b87-9be0-8ff13d746602")
 	)
-	(label "7seg-P"
-		(at 106.68 53.34 0)
+	(label "7seg-D"
+		(at 106.68 63.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "d7723515-7400-4802-bac4-7df790310e4c")
+		(uuid "e20bb1e3-0133-47a6-8f0f-eaa1a27b22c2")
+	)
+	(label "7seg-F"
+		(at 106.68 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f457c13f-d1c4-489e-9355-3a5a896be30f")
 	)
 	(label "7seg-B"
 		(at 200.66 58.42 180)

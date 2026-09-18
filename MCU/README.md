@@ -1,7 +1,7 @@
 - 操作
-    - PA5: +入力 / ロータリエンコーダA相入力
-    - PA6: -入力 / ロータリエンコーダB相入力
-    - PA7: 決定入力
+    - PA7: 表示ボタン
+    - PA6: +ボタン
+    - PA5: -ボタン
 - 7セグ
     - PA1: データ出力
     - PA3: クロック出力
@@ -20,22 +20,32 @@ ATtiny404
 
    VDD GND
 7R PA4 PA3 7C
-i  PA5 PA2 x
-i  PA6 PA1 7D
-i  PA7 PA0 x
+i- PA5 PA2 x
+i+ PA6 PA1 7D
+iD PA7 PA0 UPDI
 7E PB3 PB0 FT
 Tx PB2 PB1 FP
 ```
 
 ```
 74HC595
-G QB  VCC
-F QC   QA P
+
+A QB  VCC
+F QC   QA B
 E QD   SI 7D
 D QE    G GND
-C QF  RCK 7R
-B QG  SCK 7C
-A QH  SCL VCC
+P QF  RCK 7R
+C QG  SCK 7C
+G QH  SCL VCC
+  GND QH'
+
+x QB  VCC
+x QC   QA x
+x QD   SI 7D
+3 QE    G GND
+2 QF  RCK 7R
+1 QG  SCK 7C
+0 QH  SCL VCC
   GND QH'
 ```
 
