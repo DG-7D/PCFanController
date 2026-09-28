@@ -4687,10 +4687,6 @@
 		(uuid "61e2774a-184b-4c99-bdd8-a44acea7b7c1")
 	)
 	(no_connect
-		(at 156.21 55.88)
-		(uuid "63889355-8f51-470d-a52d-cdc438013063")
-	)
-	(no_connect
 		(at 156.21 60.96)
 		(uuid "71b3112a-7de5-459a-80c0-0577c4b91ecf")
 	)
@@ -4728,6 +4724,16 @@
 	)
 	(wire
 		(pts
+			(xy 187.96 55.88) (xy 187.96 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04818e04-39c2-4cfd-8064-e0a4187e55f4")
+	)
+	(wire
+		(pts
 			(xy 116.84 118.11) (xy 116.84 123.19)
 		)
 		(stroke
@@ -4745,6 +4751,16 @@
 			(type default)
 		)
 		(uuid "071f4720-dc4e-4403-a27e-785f045a4489")
+	)
+	(wire
+		(pts
+			(xy 199.39 74.93) (xy 199.39 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a4d7049-157c-4cf7-ab83-16c324123baa")
 	)
 	(wire
 		(pts
@@ -4868,6 +4884,16 @@
 	)
 	(wire
 		(pts
+			(xy 177.8 55.88) (xy 187.96 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d8f48ec-688c-4de2-8360-3930520c8761")
+	)
+	(wire
+		(pts
 			(xy 152.4 126.365) (xy 144.78 126.365)
 		)
 		(stroke
@@ -4895,6 +4921,16 @@
 			(type default)
 		)
 		(uuid "83f18b97-766d-4396-9686-c212acabd69c")
+	)
+	(wire
+		(pts
+			(xy 187.96 74.93) (xy 199.39 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8dc6941b-e950-4c36-bac0-3828eeb92931")
 	)
 	(wire
 		(pts
@@ -5196,6 +5232,16 @@
 		)
 		(uuid "32197f39-109b-4ddf-96bb-9cd7143c89f9")
 	)
+	(label "Fan-Gnd"
+		(at 187.96 55.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "326ff8bc-12fe-4cc5-b2a1-41e32940bd20")
+	)
 	(label "Button-Plus"
 		(at 223.52 120.65 180)
 		(effects
@@ -5255,6 +5301,16 @@
 			(justify left bottom)
 		)
 		(uuid "3f174c83-ec2b-4324-a1fe-e2b9e2bb78f6")
+	)
+	(label "Fan-Gate"
+		(at 191.77 87.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "44f31f9a-03d3-4c3b-be05-647e84a8dfcb")
 	)
 	(label "7seg-1"
 		(at 156.21 68.58 0)
@@ -5385,6 +5441,16 @@
 			(justify left bottom)
 		)
 		(uuid "7f629a47-fd45-487a-8deb-03c65a48c08c")
+	)
+	(label "Fan-Gate"
+		(at 156.21 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "83ecba7f-5921-4935-af9c-67854c539979")
 	)
 	(label "7seg-D"
 		(at 200.66 63.5 180)
@@ -6315,84 +6381,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 177.8 55.88 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "26d46e42-2bbe-43c4-a60f-5eee90ed157e")
-		(property "Reference" "#PWR010"
-			(at 177.8 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 177.8 60.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 177.8 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 177.8 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 177.8 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9c5cad37-22a0-42d4-9d66-e13105cba127")
-		)
-		(instances
-			(project "PCFanController"
-				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR010")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 30.48 45.72 270)
 		(unit 1)
 		(body_style 1)
@@ -6465,6 +6453,84 @@
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
 					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 199.39 92.71 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "30f96255-650a-4940-817d-fb71e64ad720")
+		(property "Reference" "#PWR016"
+			(at 199.39 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 199.39 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 199.39 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 199.39 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "22ae5417-18db-4269-a00d-742010cc98c3")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -6887,7 +6953,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "413687a6-7884-453f-98df-918b03d6617d")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR011"
 			(at 139.7 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -6948,7 +7014,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR012")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -8289,7 +8355,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7eb82fa6-c06a-435c-8557-4adee1c612cd")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR014"
 			(at 146.05 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -8349,7 +8415,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR015")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -9270,7 +9336,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ad405d31-c831-4de1-8ad2-a7588346adeb")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR013"
 			(at 88.9 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -9330,7 +9396,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR014")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -9744,7 +9810,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb375aff-46fe-4a8a-aa57-c4ada27c865a")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR015"
 			(at 180.34 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -9804,7 +9870,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR016")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -9901,7 +9967,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c5fb461d-0c30-4fbd-a882-1ea1a37f4854")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR010"
 			(at 82.55 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -9962,7 +10028,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR011")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -10298,7 +10364,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cabf82c7-c814-490c-a81c-4bb9bd1a846c")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR012"
 			(at 38.1 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -10358,7 +10424,7 @@
 		(instances
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
-					(reference "#PWR013")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -10994,6 +11060,94 @@
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:BSS138")
+		(at 196.85 87.63 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e435092b-81d3-4bdd-8dd1-c1de8a375390")
+		(property "Reference" "Q2"
+			(at 203.2 86.3599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MTN2306AN3"
+			(at 203.2 88.8999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 201.93 89.535 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BSS138-D.PDF"
+			(at 201.93 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23"
+			(at 196.85 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "21d84bc4-c6aa-4887-9138-2b67bce808d8")
+		)
+		(pin "2"
+			(uuid "d8e6ead2-30b9-46b4-ae66-341a8b9398c8")
+		)
+		(pin "3"
+			(uuid "42a0173b-b1cf-4343-8cc9-c32cc966d659")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "Q2")
 					(unit 1)
 				)
 			)
