@@ -47,6 +47,7 @@ constexpr uint8_t LED_7SEG_NUM_BITS[] = {
     0b00000000,
 };
 constexpr uint8_t LED_7SEG_DP_BIT = 0b00100000;
+constexpr uint8_t FAN_SW_BIT = 0b01000000; // Lowで駆動
 constexpr uint16_t POW10[] = {1, 10, 100, 1000};
 
 volatile uint16_t time = 0;
@@ -71,6 +72,13 @@ static inline void sendUART(uint8_t data) {
         ;
     }
     USART0.TXDATAL = data;
+}
+
+static inline void set595(uint8_t digit, uint8_t seg) {
+    PORTA.OUTCLR = PIN4_bm;
+    sendSPI(digit);
+    sendSPI(seg);
+    PORTA.OUTSET = PIN4_bm;
 }
 
 int main() {
@@ -102,6 +110,12 @@ int main() {
     USART0.CTRLB = USART_TXEN_bm | USART_RXMODE_NORMAL_gc;
 
     sei();
+
+    set595(FAN_SW_BIT, 0);
+    while(buttonDebounceTicks == 0) {
+        ;
+    }
+
     uint16_t rpm = 0;
     uint8_t digit = 0;
     uint8_t nextDigit = 3;
@@ -136,10 +150,7 @@ int main() {
                 break;
             }
 
-            PORTA.OUTCLR = PIN4_bm;
-            sendSPI(1 << nextDigit);
-            sendSPI(LED_7SEG_NUM_BITS[digit]);
-            PORTA.OUTSET = PIN4_bm;
+            set595(1 << nextDigit, LED_7SEG_NUM_BITS[digit]);
 
             sendUART('0' + digit);
             if (nextDigit == 0) {
