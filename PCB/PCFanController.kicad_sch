@@ -5608,7 +5608,7 @@
 				)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "330"
 			(at 102.87 54.61 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5892,7 +5892,7 @@
 				)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "330"
 			(at 102.87 49.53 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6657,7 +6657,7 @@
 				)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "330"
 			(at 102.87 59.69 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6737,7 +6737,7 @@
 				)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "330"
 			(at 102.87 62.23 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6976,7 +6976,7 @@
 				)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "330"
 			(at 102.87 52.07 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7056,7 +7056,7 @@
 				)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "330"
 			(at 102.87 67.31 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9674,7 +9674,7 @@
 				)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "330"
 			(at 102.87 64.77 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10070,7 +10070,7 @@
 				)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "330"
 			(at 102.87 57.15 90)
 			(show_name no)
 			(do_not_autoplace no)

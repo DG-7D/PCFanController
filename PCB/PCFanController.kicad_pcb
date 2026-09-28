@@ -143,7 +143,7 @@
 				)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "330"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "f329cea2-12ea-4cc7-9b57-a2922915228a")
@@ -1022,7 +1022,7 @@
 				)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "330"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "d7cc39c6-e68a-4c0f-8b0d-255fe38bd826")
@@ -2859,7 +2859,7 @@
 				)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "330"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "6fabe568-88d7-4a8a-9862-ff2bd32704af")
@@ -3757,7 +3757,7 @@
 				)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "330"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "4e8e6648-fcc2-42d9-befe-681a7097770e")
@@ -5471,7 +5471,7 @@
 				)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "330"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "32fc43c4-e938-4a75-9d01-f8ee3ec77d67")
@@ -7165,7 +7165,7 @@
 				)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "330"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "a83ee217-9ae8-47f0-ae26-6fd17ccdeeb1")
@@ -7323,7 +7323,7 @@
 				)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "330"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "bbe1723c-bbd0-4635-97e0-4a15e115febb")
@@ -8078,7 +8078,7 @@
 				)
 			)
 		)
-		(property "Value" "47"
+		(property "Value" "330"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "0f2e78e9-cdbc-465c-a1ce-5a5efcebcb52")
@@ -8218,6 +8218,39 @@
 				(xyz 0 0 0)
 			)
 		)
+	)
+	(gr_circle
+		(center 135 85)
+		(end 138 85)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "Dwgs.User")
+		(uuid "dbdee7cd-31a6-4080-b0b8-63179835ec4c")
+	)
+	(gr_circle
+		(center 135 95)
+		(end 138 95)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "Dwgs.User")
+		(uuid "c8ccefde-447c-4df7-b38a-4fe736268af8")
+	)
+	(gr_circle
+		(center 135 105)
+		(end 138 105)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "Dwgs.User")
+		(uuid "c396c107-194c-49fe-bcde-6f44cbd3f07b")
 	)
 	(gr_rect
 		(start 74.5 80)
