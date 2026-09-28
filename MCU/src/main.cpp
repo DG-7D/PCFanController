@@ -10,7 +10,7 @@ constexpr uint16_t PWM_PERIOD_CLOCKS = F_CPU / PWM_FREQ;
 constexpr uint16_t LED_ENABLE_CLOCKS = PWM_PERIOD_CLOCKS / 2;
 constexpr uint32_t CLK_TICKS_PER_MIN = F_CPU / PWM_PERIOD_CLOCKS * 60;
 constexpr uint32_t TIMEOUT_TICKS = CLK_TICKS_PER_MIN / MIN_RPM / 2;
-constexpr uint8_t LED_TICKS_PER_DIGIT = 64; // 1桁391Hz、4桁98Hz
+constexpr uint8_t LED_TICKS_PER_DIGIT = 64;    // 1桁391Hz、4桁98Hz
 constexpr uint8_t BUTTON_DEBOUNCE_TICKS = 250; // てきとー 0.01s
 
 enum MODE : uint8_t {
@@ -33,7 +33,7 @@ constexpr uint8_t LED_7SEG_NUM_BITS[] = {
     // 0b01111111,
     // 0b01011111,
     // 0b00000000,
-    //GCPDEFAB
+    // GCPDEFAB
     0b01011111,
     0b01000001,
     0b10011011,
@@ -74,9 +74,9 @@ static inline void sendUART(uint8_t data) {
     USART0.TXDATAL = data;
 }
 
-static inline void set595(uint8_t digit, uint8_t seg) {
+static inline void set595(bool fanEnable, uint8_t digit, uint8_t seg) {
     PORTA.OUTCLR = PIN4_bm;
-    sendSPI(digit);
+    sendSPI(1 << digit | (fanEnable ? 0 : FAN_SW_BIT));
     sendSPI(seg);
     PORTA.OUTSET = PIN4_bm;
 }
@@ -111,8 +111,8 @@ int main() {
 
     sei();
 
-    set595(FAN_SW_BIT, 0);
-    while(buttonDebounceTicks == 0) {
+    set595(false, 0, 0);
+    while (buttonDebounceTicks == 0) {
         ;
     }
 
@@ -150,7 +150,7 @@ int main() {
                 break;
             }
 
-            set595(1 << nextDigit, LED_7SEG_NUM_BITS[digit]);
+            set595(true, nextDigit, LED_7SEG_NUM_BITS[digit]);
 
             sendUART('0' + digit);
             if (nextDigit == 0) {
