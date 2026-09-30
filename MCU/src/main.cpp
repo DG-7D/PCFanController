@@ -114,8 +114,13 @@ int main() {
     uint8_t digit = 3;
     while (1) {
         if (mode == MODE_OFF) {
+            TCA0.SINGLE.CMP0 = PWM_PERIOD_CLOCKS;
             continue;
+        } else {
+            TCA0.SINGLE.CMP0 = LED_ENABLE_CLOCKS;
         }
+        TCA0.SINGLE.CMP1 = PWM_PERIOD_CLOCKS * power / 100;
+
         if (ledUpdateFlag) {
             ledUpdateFlag = false;
 
@@ -197,13 +202,10 @@ ISR(TCA0_OVF_vect) {
             } else if (!(lastButtonState & PIN7_bm)) {
                 if (mode != MODE_COUNT - 1) {
                     mode = (MODE)(mode + 1);
-                    TCA0.SINGLE.CMP0 = LED_ENABLE_CLOCKS;
                 } else {
                     mode = MODE_OFF;
-                    TCA0.SINGLE.CMP0 = PWM_PERIOD_CLOCKS;
                 }
             }
-            TCA0.SINGLE.CMP1 = PWM_PERIOD_CLOCKS * power / 100;
         }
     }
 }
