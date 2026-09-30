@@ -10,7 +10,7 @@ constexpr uint8_t LED_TICKS_PER_DIGIT = 64;    // 1桁391Hz、4桁98Hz
 constexpr uint8_t BUTTON_DEBOUNCE_TICKS = 250; // てきとー 0.01s
 
 constexpr uint16_t PWM_PERIOD_CLOCKS = F_CPU / PWM_FREQ;
-constexpr uint16_t LED_ENABLE_CLOCKS = PWM_PERIOD_CLOCKS * LED_BRIGHTNESS;
+constexpr uint16_t LED_ENABLE_CLOCKS = PWM_PERIOD_CLOCKS * (1 - LED_BRIGHTNESS);
 constexpr uint32_t CLK_TICKS_PER_MIN = F_CPU / PWM_PERIOD_CLOCKS * 60;
 constexpr uint32_t TIMEOUT_TICKS = CLK_TICKS_PER_MIN / MIN_RPM / 2;
 constexpr uint16_t POW10[] = {1, 10, 100, 1000};
@@ -68,7 +68,7 @@ int main() {
         } else {
             TCA0.SINGLE.CMP0 = LED_ENABLE_CLOCKS;
         }
-        TCA0.SINGLE.CMP1 = PWM_PERIOD_CLOCKS * power / 100;
+        TCA0.SINGLE.CMP1 = PWM_PERIOD_CLOCKS * (100 - power) / 100;
 
         if (ledUpdateFlag) {
             ledUpdateFlag = false;
