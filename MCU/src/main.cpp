@@ -15,19 +15,19 @@ constexpr uint32_t CLK_TICKS_PER_MIN = F_CPU / PWM_PERIOD_CLOCKS * 60;
 constexpr uint32_t TIMEOUT_TICKS = CLK_TICKS_PER_MIN / MIN_RPM / 2;
 constexpr uint16_t POW10[] = {1, 10, 100, 1000};
 
-enum MODE : uint8_t {
-    MODE_OFF,
-    MODE_RPM,
-    MODE_POWER,
-    MODE_COUNT,
-    MODE_STARTUP,
+enum DISP : uint8_t {
+    DISP_OFF,
+    DISP_RPM,
+    DISP_POWER,
+    DISP_COUNT,
 };
 
 volatile uint16_t pulseWidth = 0;
 volatile bool ledUpdateFlag = true;
-volatile uint8_t power = 100;
-volatile MODE mode = MODE_RPM;
-volatile uint8_t segCharBuffer[4] = {};
+volatile uint8_t power = 0;
+volatile bool fanEnabled = false;
+volatile DISP disp = DISP_RPM;
+volatile uint8_t dispCharBuffer[4] = {};
 
 int main() {
     _PROTECTED_WRITE(CLKCTRL.MCLKCTRLB, ~CLKCTRL_PEN_bm);
@@ -59,15 +59,10 @@ int main() {
 
     sei();
 
-    set595(false, 0, 0);
-    while (buttonDebounceTicks == 0) {
-        ;
-    }
-
     uint16_t rpm = 0;
-    uint8_t digit = 3;
+    uint8_t digit = 0;
     while (1) {
-        if (mode == MODE_OFF) {
+        if (disp == DISP_OFF) {
             TCA0.SINGLE.CMP0 = PWM_PERIOD_CLOCKS;
             continue;
         } else {
@@ -78,42 +73,49 @@ int main() {
         if (ledUpdateFlag) {
             ledUpdateFlag = false;
 
-            set595(true, digit, segCharBuffer[digit]);
+            set595(fanEnabled, digit, dispCharBuffer[digit]);
+            digit = (digit + 1) % 4;
 
-            sendUART(segCharBuffer[digit]);
             if (digit == 0) {
+                sendUART(dispCharBuffer[3]);
+                sendUART(dispCharBuffer[2]);
+                sendUART(dispCharBuffer[1]);
+                sendUART(dispCharBuffer[0]);
                 sendUART('\n');
-            }
 
-            if (digit == 0) {
-                switch (mode) {
-                case MODE_RPM:
-                    cli();
-                    const uint16_t ticks = pulseWidth;
-                    sei();
-                    if (ticks == 0) {
-                        rpm = 0;
-                    } else {
-                        rpm = CLK_TICKS_PER_MIN / ticks / 2;
-                    }
-                    for (uint8_t i = 0; i < 4; i++) {
-                        segCharBuffer[i] = '0' + (rpm / POW10[i] % 10);
-                    }
-                    break;
+                if (fanEnabled) {
+                    switch (disp) {
+                    case DISP_RPM:
+                        cli();
+                        const uint16_t ticks = pulseWidth;
+                        sei();
+                        if (ticks == 0) {
+                            rpm = 0;
+                        } else {
+                            rpm = CLK_TICKS_PER_MIN / ticks / 2;
+                        }
+                        for (uint8_t i = 0; i < 4; i++) {
+                            dispCharBuffer[i] = '0' + (rpm / POW10[i] % 10);
+                        }
+                        break;
 
-                case MODE_POWER:
-                    for (uint8_t i = 0; i < 3; i++) {
-                        segCharBuffer[i] = '0' + (power / POW10[i] % 10);
+                    case DISP_POWER:
+                        dispCharBuffer[3] = ' ';
+                        for (uint8_t i = 0; i < 3; i++) {
+                            dispCharBuffer[i] = '0' + (power / POW10[i] % 10);
+                        }
+                        break;
                     }
-                    segCharBuffer[3] = LED_7SEG_CHAR_BITS[' '];
-                    break;
-                }
-            }
-
-            digit = (digit + 4 - 1) % 4;
+                } else {
+                    dispCharBuffer[3] = ' ';
+                    dispCharBuffer[2] = 'O';
+                    dispCharBuffer[1] = 'F';
+                    dispCharBuffer[0] = 'F';
                 }
             }
         }
+    }
+}
 
 volatile uint16_t tick = 0;
 volatile uint16_t lastPulseTick = 0;
@@ -147,22 +149,30 @@ ISR(TCA0_OVF_vect) {
 
         if (buttonDebounceTicks == 0 && (PORTA.IN & (PIN5_bm | PIN6_bm | PIN7_bm)) == lastButtonState) {
             if (!(lastButtonState & PIN5_bm)) {
+                if (!fanEnabled) {
+                    fanEnabled = true;
+                    return;
+                }
                 if (power <= 100 - POWER_STEP) {
                     power = power + POWER_STEP;
                 } else {
                     power = 100;
                 }
             } else if (!(lastButtonState & PIN6_bm)) {
+                if (power == 0) {
+                    fanEnabled = false;
+                    return;
+                }
                 if (POWER_STEP <= power) {
                     power = power - POWER_STEP;
                 } else {
                     power = 0;
                 }
             } else if (!(lastButtonState & PIN7_bm)) {
-                if (mode != MODE_COUNT - 1) {
-                    mode = (MODE)(mode + 1);
+                if (disp != DISP_COUNT - 1) {
+                    disp = (DISP)(disp + 1);
                 } else {
-                    mode = MODE_OFF;
+                    disp = DISP_OFF;
                 }
             }
         }
@@ -203,10 +213,8 @@ constexpr const uint8_t LED_7SEG_CHAR_BITS[] = {
     ['9'] = 0b11011011,
     //        GCPDEFAB
     [' '] = 0b00000000,
-    ['P'] = 0b10001111,
-    ['U'] = 0b01011101,
-    ['S'] = 0b11010110,
-    ['H'] = 0b11001101,
+    ['O'] = 0b01011111,
+    ['F'] = 0b10001110,
 };
 constexpr uint8_t LED_7SEG_DP_BIT = 0b00100000;
 constexpr uint8_t FAN_SW_BIT = 0b01000000; // Lowで駆動
