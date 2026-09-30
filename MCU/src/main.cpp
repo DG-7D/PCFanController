@@ -20,31 +20,24 @@ enum MODE : uint8_t {
     MODE_COUNT,
 };
 
-constexpr uint8_t LED_7SEG_NUM_BITS[] = {
-    // // GFEDCBA
-    // 0b00111111,
-    // 0b00000110,
-    // 0b01011011,
-    // 0b00011111,
-    // 0b01100110,
-    // 0b01101101,
-    // 0b01111110,
-    // 0b00000111,
-    // 0b01111111,
-    // 0b01011111,
-    // 0b00000000,
-    // GCPDEFAB
-    0b01011111,
-    0b01000001,
-    0b10011011,
-    0b01011011,
-    0b11000101,
-    0b11010110,
-    0b11011101,
-    0b01000011,
-    0b11011111,
-    0b11011011,
-    0b00000000,
+constexpr const uint8_t LED_7SEG_CHAR_BITS[] = {
+    //        GCPDEFAB
+    ['0'] = 0b01011111,
+    ['1'] = 0b01000001,
+    ['2'] = 0b10011011,
+    ['3'] = 0b01011011,
+    ['4'] = 0b11000101,
+    ['5'] = 0b11010110,
+    ['6'] = 0b11011101,
+    ['7'] = 0b01000011,
+    ['8'] = 0b11011111,
+    ['9'] = 0b11011011,
+    //        GCPDEFAB
+    [' '] = 0b00000000,
+    ['P'] = 0b10001111,
+    ['U'] = 0b01011101,
+    ['S'] = 0b11010110,
+    ['H'] = 0b11001101,
 };
 constexpr uint8_t LED_7SEG_DP_BIT = 0b00100000;
 constexpr uint8_t FAN_SW_BIT = 0b01000000; // Lowで駆動
@@ -59,6 +52,7 @@ volatile uint8_t lastButtonState = 0;
 
 volatile uint8_t power = 100;
 volatile MODE mode = MODE_RPM;
+volatile uint8_t segCharBuffer[4] = {};
 
 static inline void sendSPI(uint8_t data) {
     SPI0.DATA = data;
@@ -74,10 +68,10 @@ static inline void sendUART(uint8_t data) {
     USART0.TXDATAL = data;
 }
 
-static inline void set595(bool fanEnable, uint8_t digit, uint8_t seg) {
+static inline void set595(bool fanEnable, uint8_t digit, uint8_t character) {
     PORTA.OUTCLR = PIN4_bm;
     sendSPI(1 << digit | (fanEnable ? 0 : FAN_SW_BIT));
-    sendSPI(seg);
+    sendSPI(LED_7SEG_CHAR_BITS[character]);
     PORTA.OUTSET = PIN4_bm;
 }
 
@@ -117,8 +111,7 @@ int main() {
     }
 
     uint16_t rpm = 0;
-    uint8_t digit = 0;
-    uint8_t nextDigit = 3;
+    uint8_t digit = 3;
     while (1) {
         if (mode == MODE_OFF) {
             continue;
@@ -126,9 +119,16 @@ int main() {
         if (ledUpdateFlag) {
             ledUpdateFlag = false;
 
-            switch (mode) {
-            case MODE_RPM:
-                if (nextDigit == 0) {
+            set595(true, digit, segCharBuffer[digit]);
+
+            sendUART(segCharBuffer[digit]);
+            if (digit == 0) {
+                sendUART('\n');
+            }
+
+            if (digit == 0) {
+                switch (mode) {
+                case MODE_RPM:
                     cli();
                     const uint16_t ticks = pulseWidth;
                     sei();
@@ -137,27 +137,21 @@ int main() {
                     } else {
                         rpm = CLK_TICKS_PER_MIN / ticks / 2;
                     }
-                }
-                digit = rpm / POW10[nextDigit] % 10;
-                break;
+                    for (uint8_t i = 0; i < 4; i++) {
+                        segCharBuffer[i] = '0' + (rpm / POW10[i] % 10);
+                    }
+                    break;
 
-            case MODE_POWER:
-                if (nextDigit == 3) {
-                    digit = 10; // 明るさ変わらないよう虚無を表示
-                } else {
-                    digit = power / POW10[nextDigit] % 10;
+                case MODE_POWER:
+                    for (uint8_t i = 0; i < 3; i++) {
+                        segCharBuffer[i] = '0' + (power / POW10[i] % 10);
+                    }
+                    segCharBuffer[3] = LED_7SEG_CHAR_BITS[' '];
+                    break;
                 }
-                break;
             }
 
-            set595(true, nextDigit, LED_7SEG_NUM_BITS[digit]);
-
-            sendUART('0' + digit);
-            if (nextDigit == 0) {
-                sendUART('\n');
-            }
-
-            nextDigit = (nextDigit + 4 - 1) % 4;
+            digit = (digit + 4 - 1) % 4;
         }
     }
 }
