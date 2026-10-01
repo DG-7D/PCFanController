@@ -5212,16 +5212,6 @@
 		)
 		(uuid "2a3b0162-8d60-4140-a400-f65cb297497f")
 	)
-	(label "7seg-En"
-		(at 135.89 68.58 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "2b4f246d-5a89-4719-8e0f-4b83390a54ed")
-	)
 	(label "7seg-E"
 		(at 106.68 60.96 0)
 		(effects
@@ -10941,6 +10931,85 @@
 			(project "PCFanController"
 				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
 					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 135.89 68.58 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e01c2201-ed5a-4e51-8a57-5743849d087d")
+		(property "Reference" "#PWR032"
+			(at 129.54 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 132.08 68.5799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 135.89 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3a87805d-a5c8-425d-8004-bac3c0ab3841")
+		)
+		(instances
+			(project "PCFanController"
+				(path "/52b4d307-cc39-4fe2-86bc-cae0e5ee7f53"
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
