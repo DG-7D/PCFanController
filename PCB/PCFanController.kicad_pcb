@@ -8681,6 +8681,67 @@
 		(layer "Edge.Cuts")
 		(uuid "050cfdb3-ee9a-4d39-97dc-8490a76b4ab8")
 	)
+	(gr_text "UG3\nTG3"
+		(at 125.5 82 0)
+		(layer "F.Mask")
+		(uuid "ce5fb7b0-445f-4fcf-90c0-61c5c4814ccf")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.16)
+				(bold yes)
+			)
+		)
+	)
+	(gr_text "DISP"
+		(at 138 88 0)
+		(layer "F.Mask")
+		(uuid "0d020f6a-2957-415a-b458-21522d29f6e5")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.16)
+				(bold yes)
+			)
+		)
+	)
+	(gr_text "+"
+		(at 138 98 0)
+		(layer "F.Mask")
+		(uuid "0fc6f0ae-c299-4611-9edf-32a7b95ffa2b")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.16)
+				(bold yes)
+			)
+		)
+	)
+	(gr_text "-\n"
+		(at 138 102 0)
+		(layer "F.Mask")
+		(uuid "02c417f9-1bde-493b-9e57-2017f64327ce")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.16)
+				(bold yes)
+			)
+		)
+	)
+	(gr_text "l.dg7.dev/fan"
+		(at 139 108.5 0)
+		(layer "F.Mask")
+		(uuid "ad420bbe-b4fc-4917-a137-e248ad7b5b18")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.16)
+				(bold yes)
+			)
+			(justify right)
+		)
+	)
 	(gr_text "MTN2306\n"
 		(at 76.5 91 0)
 		(layer "F.SilkS")
@@ -8759,10 +8820,36 @@
 			(justify left)
 		)
 	)
+	(gr_text "OSL40562"
+		(at 92.5 94 0)
+		(layer "F.SilkS")
+		(uuid "f66fe334-2a03-4f10-b134-2ba9ca311de6")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.16)
+				(bold yes)
+			)
+			(justify left)
+		)
+	)
 	(gr_text "8xR_LED"
 		(at 97 95.5 0)
 		(layer "F.SilkS")
 		(uuid "9b68caf7-3d0c-4a89-ab73-25376f631d0e")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.16)
+				(bold yes)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "2x74HC595"
+		(at 109.5 92.5 0)
+		(layer "F.SilkS")
+		(uuid "075047cd-5fa7-4bf6-93c2-8a353be71775")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -8782,67 +8869,6 @@
 				(thickness 0.16)
 				(bold yes)
 			)
-		)
-	)
-	(gr_text "UG3\nTG3"
-		(at 125.5 82 0)
-		(layer "F.SilkS")
-		(uuid "ce5fb7b0-445f-4fcf-90c0-61c5c4814ccf")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.16)
-				(bold yes)
-			)
-		)
-	)
-	(gr_text "DISP"
-		(at 138 88 0)
-		(layer "F.SilkS")
-		(uuid "0d020f6a-2957-415a-b458-21522d29f6e5")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.16)
-				(bold yes)
-			)
-		)
-	)
-	(gr_text "+"
-		(at 138 98 0)
-		(layer "F.SilkS")
-		(uuid "0fc6f0ae-c299-4611-9edf-32a7b95ffa2b")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.16)
-				(bold yes)
-			)
-		)
-	)
-	(gr_text "-\n"
-		(at 138 102 0)
-		(layer "F.SilkS")
-		(uuid "02c417f9-1bde-493b-9e57-2017f64327ce")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.16)
-				(bold yes)
-			)
-		)
-	)
-	(gr_text "l.dg7.dev/fan"
-		(at 139.5 109 0)
-		(layer "F.SilkS")
-		(uuid "ad420bbe-b4fc-4917-a137-e248ad7b5b18")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.16)
-				(bold yes)
-			)
-			(justify right)
 		)
 	)
 	(dimension
