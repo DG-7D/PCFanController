@@ -8549,6 +8549,19 @@
 		(layer "Edge.Cuts")
 		(uuid "050cfdb3-ee9a-4d39-97dc-8490a76b4ab8")
 	)
+	(gr_text "GVTP"
+		(at 77 81.5 0)
+		(layer "F.Mask")
+		(uuid "fdcab94a-0902-429e-ac03-40d77bd869e3")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.16)
+				(bold yes)
+			)
+			(justify left)
+		)
+	)
 	(gr_text "UG3\nTG3"
 		(at 125.5 82 0)
 		(layer "F.Mask")
@@ -8725,18 +8738,6 @@
 				(bold yes)
 			)
 			(justify left)
-		)
-	)
-	(gr_text "G"
-		(at 76 81.5 0)
-		(layer "F.SilkS")
-		(uuid "fdcab94a-0902-429e-ac03-40d77bd869e3")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.16)
-				(bold yes)
-			)
 		)
 	)
 	(dimension
