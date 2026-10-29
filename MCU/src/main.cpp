@@ -22,6 +22,46 @@ enum DISP : uint8_t {
     DISP_COUNT,
 };
 
+static inline void sendSPI(uint8_t data) {
+    SPI0.DATA = data;
+    while (!(SPI0.INTFLAGS & SPI_IF_bm)) {
+        ;
+    }
+}
+
+static inline void sendUART(uint8_t data) {
+    while (!(USART0.STATUS & USART_DREIF_bm)) {
+        ;
+    }
+    USART0.TXDATAL = data;
+}
+
+constexpr const uint8_t LED_7SEG_CHAR_BITS[] = {
+    //        GCPDEFAB
+    ['0'] = 0b01011111,
+    ['1'] = 0b01000001,
+    ['2'] = 0b10011011,
+    ['3'] = 0b01011011,
+    ['4'] = 0b11000101,
+    ['5'] = 0b11010110,
+    ['6'] = 0b11011101,
+    ['7'] = 0b01000011,
+    ['8'] = 0b11011111,
+    ['9'] = 0b11011011,
+    //        GCPDEFAB
+    [' '] = 0b00000000,
+    ['O'] = 0b01011111,
+    ['F'] = 0b10001110,
+};
+constexpr uint8_t LED_7SEG_DP_BIT = 0b00100000;
+constexpr uint8_t FAN_SW_BIT = 0b01000000; // Lowで駆動
+static inline void set595(bool fanEnable, uint8_t digit, uint8_t character) {
+    PORTA.OUTCLR = PIN4_bm;
+    sendSPI(1 << digit | (fanEnable ? 0 : FAN_SW_BIT));
+    sendSPI(LED_7SEG_CHAR_BITS[character]);
+    PORTA.OUTSET = PIN4_bm;
+}
+
 volatile uint16_t pulseWidth = 0;
 volatile bool ledUpdateFlag = true;
 volatile uint8_t power = 0;
@@ -178,43 +218,3 @@ ISR(TCA0_OVF_vect) {
         }
     }
 }
-
-static inline void sendSPI(uint8_t data) {
-    SPI0.DATA = data;
-    while (!(SPI0.INTFLAGS & SPI_IF_bm)) {
-        ;
-    }
-}
-
-static inline void sendUART(uint8_t data) {
-    while (!(USART0.STATUS & USART_DREIF_bm)) {
-        ;
-    }
-    USART0.TXDATAL = data;
-}
-
-static inline void set595(bool fanEnable, uint8_t digit, uint8_t character) {
-    PORTA.OUTCLR = PIN4_bm;
-    sendSPI(1 << digit | (fanEnable ? 0 : FAN_SW_BIT));
-    sendSPI(LED_7SEG_CHAR_BITS[character]);
-    PORTA.OUTSET = PIN4_bm;
-}
-constexpr const uint8_t LED_7SEG_CHAR_BITS[] = {
-    //        GCPDEFAB
-    ['0'] = 0b01011111,
-    ['1'] = 0b01000001,
-    ['2'] = 0b10011011,
-    ['3'] = 0b01011011,
-    ['4'] = 0b11000101,
-    ['5'] = 0b11010110,
-    ['6'] = 0b11011101,
-    ['7'] = 0b01000011,
-    ['8'] = 0b11011111,
-    ['9'] = 0b11011011,
-    //        GCPDEFAB
-    [' '] = 0b00000000,
-    ['O'] = 0b01011111,
-    ['F'] = 0b10001110,
-};
-constexpr uint8_t LED_7SEG_DP_BIT = 0b00100000;
-constexpr uint8_t FAN_SW_BIT = 0b01000000; // Lowで駆動
