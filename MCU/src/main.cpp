@@ -30,10 +30,12 @@ static inline void sendSPI(uint8_t data) {
 }
 
 static inline void sendUART(uint8_t data) {
+    #if ENABLE_UART
     while (!(USART0.STATUS & USART_DREIF_bm)) {
         ;
     }
     USART0.TXDATAL = data;
+    #endif
 }
 
 // clang-format off
@@ -75,7 +77,7 @@ static inline void set595(bool fanEnable, uint8_t digit, uint8_t character) {
 
 volatile uint16_t pulseWidth = 0;
 volatile bool ledUpdateFlag = true;
-volatile uint8_t power = 0;
+volatile uint8_t power = 30;
 volatile bool fanEnabled = false;
 volatile DISP disp = DISP_RPM;
 volatile uint8_t dispCharBuffer[4] = {};

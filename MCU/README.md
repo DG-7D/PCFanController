@@ -1,55 +1,74 @@
-- 操作
-    - PA7: 表示ボタン
-    - PA6: +ボタン
-    - PA5: -ボタン
-- 7セグ
-    - PA1: データ出力
-    - PA3: クロック出力
-    - PA4: ラッチ出力
-    - PB3: 有効出力 (Active Low)
-- ファン
-    - PB0: 回転数パルス入力
-    - PB1: PWM出力
-- その他
-    - PA0: RESET / UPDI
-    - PA2: MISO (未使用)
-    - PB2: TxD
+# PCファン制御器 ATtiny404 ファームウェア
 
-```
-ATtiny404
+## 書込
 
-   VDD GND
-7R PA4 PA3 7C
-i- PA5 PA2 x
-i+ PA6 PA1 7D
-iD PA7 PA0 UPDI
-7E PB3 PB0 FT
-Tx PB2 PB1 FP
-```
+右上テストパッド(スルーホール)の上側を使用、左からUPDI, GND, 3.3 V
 
-```
-74HC595
-
-A QB  VCC
-F QC   QA B
-E QD   SI 7D
-D QE    G GND
-P QF  RCK 7R
-C QG  SCK 7C
-G QH  SCL VCC
-  GND QH'
-
-x QB  VCC
-x QC   QA x
-x QD   SI 7D
-3 QE    G GND
-2 QF  RCK 7R
-1 QG  SCK 7C
-0 QH  SCL VCC
-  GND QH'
-```
+ヒューズ設定 (デフォルト、16MHz)
 
 ```
 pio run -t fuses
+```
+
+書込
+
+```
 pio run -t upload
 ```
+
+## ピン
+
+### ATtiny404
+
+- 操作入力 (プルアップ)
+    - PA7: 表示ボタン
+    - PA6: +ボタン
+    - PA5: -ボタン
+- シフトレジスタ出力
+    - PA1: データ
+    - PA3: クロック
+    - PA4: ラッチ
+    - PB3: 有効 (Active Low)
+- ファン
+    - PB0: 回転数パルス入力 (オープンコレクタ)
+    - PB1: PWM出力 (MOSFET反転)
+- その他
+    - PA0: UPDI (/RESET)
+    - PA2: SPI MISO (未使用)
+    - PB2: UART TxD
+
+| 説明 | ピン | ピン | 説明 |
+|----:|:----|----:|:----|
+| 3.3 V | VDD | GND | GND |
+| 595ラッチ← | PA4 | PA3 | →595クロック |
+| /-ボタン→ | PA5 | PA2 | (←SPI MISO) |
+| /+ボタン→ | PA6 | PA1 | →595データ |
+| /表示ボタン→ | PA7 | PA0 | UPDI |
+| /595有効← | PB3 | PB0 | ←/ファン回転数パルス |
+| UART← | PB2 | PB1 | →/ファンPWM |
+
+### 74HC595 1つめ
+
+| 説明 | ピン | ピン | 説明 |
+|----:|:----|----:|:----|
+| 7セグA | QB | VCC | 3.3 V |
+| 7セグF | QC | QA | 7セグB |
+| 7セグE | QD | SER | 595データ (←ATtiny) |
+| 7セグD | QE | /OE | /595有効 |
+| 7セグP | QF | RCLK | 595ラッチ |
+| 7セグC | QG | SRCLK | 595クロック |
+| 7セグG | QH | /SRCLR | H |
+| GND | GND | QH' | 595データ (→595-2) |
+
+### 74HC595 2つめ
+
+| 説明 | ピン | ピン | 説明 |
+|----:|:----|----:|:----|
+| ファンON | QB | VCC | 3.3 V |
+| x | QC | QA | x |
+| x | QD | SER | 595データ (←595-1) |
+| 7セグ3 | QE | /OE | L |
+| 7セグ2 | QF | RCLK | 595ラッチ |
+| 7セグ1 | QG | SRCLK | 595クロック |
+| 7セグ0 | QH | /SRCLR | H |
+| GND | GND | QH' | (データ →x) |
