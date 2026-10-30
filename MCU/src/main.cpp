@@ -30,12 +30,12 @@ static inline void sendSPI(uint8_t data) {
 }
 
 static inline void sendUART(uint8_t data) {
-    #if ENABLE_UART
+#if ENABLE_UART
     while (!(USART0.STATUS & USART_DREIF_bm)) {
         ;
     }
     USART0.TXDATAL = data;
-    #endif
+#endif
 }
 
 // clang-format off
@@ -202,16 +202,6 @@ ISR(TCA0_OVF_vect) {
 
         if (buttonDebounceTicks == 0 && (PORTA.IN & (PIN5_bm | PIN6_bm | PIN7_bm)) == lastButtonState) {
             if (!(lastButtonState & PIN5_bm)) {
-                if (!fanEnabled) {
-                    fanEnabled = true;
-                    return;
-                }
-                if (power <= 100 - POWER_STEP) {
-                    power = power + POWER_STEP;
-                } else {
-                    power = 100;
-                }
-            } else if (!(lastButtonState & PIN6_bm)) {
                 if (power == 0) {
                     fanEnabled = false;
                     return;
@@ -220,6 +210,16 @@ ISR(TCA0_OVF_vect) {
                     power = power - POWER_STEP;
                 } else {
                     power = 0;
+                }
+            } else if (!(lastButtonState & PIN6_bm)) {
+                if (!fanEnabled) {
+                    fanEnabled = true;
+                    return;
+                }
+                if (power <= 100 - POWER_STEP) {
+                    power = power + POWER_STEP;
+                } else {
+                    power = 100;
                 }
             } else if (!(lastButtonState & PIN7_bm)) {
                 if (disp != DISP_COUNT - 1) {
