@@ -44,33 +44,33 @@ constexpr const uint8_t LED_7SEG_CHAR_BITS[0x50] = {
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    //GCPDEFAB 0x30-0x39: '0'-'9'
-    0b01011111,
-    0b01000001,
-    0b10011011,
-    0b01011011,
-    0b11000101,
-    0b11010110,
-    0b11011101,
-    0b01000011,
-    0b11011111,
-    0b11011011,
+    //BAFEDPCG 0x30-0x39: '0'-'9'
+    0b11111010,
+    0b10000010,
+    0b11011001,
+    0b11001011,
+    0b10100011,
+    0b01101011,
+    0b01111011,
+    0b11000010,
+    0b11111011,
+    0b11101011,
     // 0x3a-0x45
                                   0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0,
-    //GCPDEFAB 0x46: 'F'
-    0b10001110,
+    //BAFEDPCG 0x46: 'F'
+    0b01110001,
     // 0x47-0x4e
                             0, 0, 0, 0, 0, 0, 0, 0,
-    //GCPDEFAB 0x4f: 'O'
-    0b01011111,
+    //BAFEDPCG 0x4f: 'O'
+    0b11111010,
 };
 // clang-format on
 constexpr uint8_t LED_7SEG_DP_BIT = 0b00100000;
 constexpr uint8_t FAN_SW_BIT = 0b01000000;
 static inline void set595(bool fanEnable, uint8_t digit, uint8_t character) {
     PORTA.OUTCLR = PIN4_bm;
-    sendSPI(1 << digit | (fanEnable ? FAN_SW_BIT : 0));
+    sendSPI((0b1111 ^ (1 << digit)) | (fanEnable ? FAN_SW_BIT : 0));
     sendSPI(LED_7SEG_CHAR_BITS[character]);
     PORTA.OUTSET = PIN4_bm;
 }
