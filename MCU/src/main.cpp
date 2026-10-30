@@ -138,7 +138,7 @@ int main() {
 
                 if (fanEnabled) {
                     switch (disp) {
-                    case DISP_RPM:
+                    case DISP_RPM: {
                         cli();
                         const uint16_t ticks = pulseWidth;
                         sei();
@@ -151,13 +151,14 @@ int main() {
                             dispCharBuffer[i] = '0' + (rpm / POW10[i] % 10);
                         }
                         break;
-
-                    case DISP_POWER:
+                    }
+                    case DISP_POWER: {
                         dispCharBuffer[3] = ' ';
                         for (uint8_t i = 0; i < 3; i++) {
                             dispCharBuffer[i] = '0' + (power / POW10[i] % 10);
                         }
                         break;
+                    }
                     }
                 } else {
                     dispCharBuffer[3] = ' ';
