@@ -67,10 +67,10 @@ constexpr const uint8_t LED_7SEG_CHAR_BITS[0x50] = {
 };
 // clang-format on
 constexpr uint8_t LED_7SEG_DP_BIT = 0b00100000;
-constexpr uint8_t FAN_SW_BIT = 0b01000000; // Lowで駆動
+constexpr uint8_t FAN_SW_BIT = 0b01000000;
 static inline void set595(bool fanEnable, uint8_t digit, uint8_t character) {
     PORTA.OUTCLR = PIN4_bm;
-    sendSPI(1 << digit | (fanEnable ? 0 : FAN_SW_BIT));
+    sendSPI(1 << digit | (fanEnable ? FAN_SW_BIT : 0));
     sendSPI(LED_7SEG_CHAR_BITS[character]);
     PORTA.OUTSET = PIN4_bm;
 }
