@@ -116,27 +116,18 @@ int main() {
     uint16_t ticksFiltered = 0;
     uint8_t digit = 0;
     while (1) {
+        TCA0.SINGLE.CMP1 = PWM_PERIOD_CLOCKS * (100 - power) / 100;
+
         if (disp == DISP_OFF) {
             TCA0.SINGLE.CMP0 = PWM_PERIOD_CLOCKS;
+            set595(fanEnabled, 0, 0);
             continue;
-        } else {
-            TCA0.SINGLE.CMP0 = LED_ENABLE_CLOCKS;
         }
-        TCA0.SINGLE.CMP1 = PWM_PERIOD_CLOCKS * (100 - power) / 100;
 
         if (ledUpdateFlag) {
             ledUpdateFlag = false;
 
-            set595(fanEnabled, digit, dispCharBuffer[digit]);
-            digit = (digit + 1) % 4;
-
             if (digit == 0) {
-                sendUART(dispCharBuffer[3]);
-                sendUART(dispCharBuffer[2]);
-                sendUART(dispCharBuffer[1]);
-                sendUART(dispCharBuffer[0]);
-                sendUART('\n');
-
                 if (fanEnabled) {
                     switch (disp) {
                     case DISP_RPM: {
@@ -173,7 +164,17 @@ int main() {
                     dispCharBuffer[1] = 'F';
                     dispCharBuffer[0] = 'F';
                 }
+
+                sendUART(dispCharBuffer[3]);
+                sendUART(dispCharBuffer[2]);
+                sendUART(dispCharBuffer[1]);
+                sendUART(dispCharBuffer[0]);
+                sendUART('\n');
             }
+            set595(fanEnabled, digit, dispCharBuffer[digit]);
+            TCA0.SINGLE.CMP0 = LED_ENABLE_CLOCKS;
+
+            digit = (digit + 1) % 4;
         }
     }
 }
