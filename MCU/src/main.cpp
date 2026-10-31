@@ -4,6 +4,7 @@
 constexpr uint8_t POWER_STEP = 10;
 constexpr uint16_t MIN_RPM = 120;
 constexpr float LED_BRIGHTNESS = 0.5;
+constexpr uint8_t HYSTERESIS_RPM = 2;
 
 constexpr uint32_t PWM_FREQ = 25000;           // ticks/s
 constexpr uint8_t LED_TICKS_PER_DIGIT = 64;    // 1桁391Hz、4桁98Hz
@@ -112,7 +113,7 @@ int main() {
 
     sei();
 
-    uint16_t rpm = 0;
+    uint16_t rpmFiltered = 0;
     uint8_t digit = 0;
     while (1) {
         if (disp == DISP_OFF) {
@@ -143,12 +144,17 @@ int main() {
                         const uint16_t ticks = pulseWidth;
                         sei();
                         if (ticks == 0) {
-                            rpm = 0;
+                            rpmFiltered = 0;
                         } else {
-                            rpm = CLK_TICKS_PER_MIN / ticks / 2;
+                            const uint16_t rpm = CLK_TICKS_PER_MIN / ticks / 2;
+                            if (rpm < rpmFiltered - HYSTERESIS_RPM) {
+                                rpmFiltered = rpm + HYSTERESIS_RPM / 2;
+                            } else if (rpmFiltered + HYSTERESIS_RPM < rpm) {
+                                rpmFiltered = rpm - (HYSTERESIS_RPM - HYSTERESIS_RPM / 2);
+                            }
                         }
                         for (uint8_t i = 0; i < 4; i++) {
-                            dispCharBuffer[i] = '0' + (rpm / POW10[i] % 10);
+                            dispCharBuffer[i] = '0' + (rpmFiltered / POW10[i] % 10);
                         }
                         break;
                     }
