@@ -3,7 +3,7 @@
 
 constexpr uint8_t POWER_STEP = 10;
 constexpr uint16_t MIN_RPM = 120;
-constexpr float LED_BRIGHTNESS = 0.5;
+constexpr float LED_BRIGHTNESS = 1;
 constexpr uint8_t HYSTERESIS_TICKS = 2;
 
 constexpr uint32_t PWM_FREQ = 25000;           // ticks/s
@@ -234,7 +234,7 @@ ISR(TCA0_OVF_vect) {
                 if (disp != DISP_COUNT - 1) {
                     disp = (DISP)(disp + 1);
                 } else {
-                    disp = DISP_OFF;
+                    disp = (DISP)(DISP_OFF + 1);
                 }
             }
         }
