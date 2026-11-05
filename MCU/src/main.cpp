@@ -4,7 +4,7 @@
 constexpr uint8_t POWER_STEP = 10;
 constexpr uint16_t MIN_RPM = 120;
 constexpr float LED_BRIGHTNESS = 1;
-constexpr uint8_t HYSTERESIS_TICKS = 2;
+constexpr uint8_t HYSTERESIS_TICKS = 8;
 
 constexpr uint32_t PWM_FREQ = 25000;           // ticks/s
 constexpr uint8_t LED_TICKS_PER_DIGIT = 64;    // 1桁391Hz、4桁98Hz
@@ -78,9 +78,9 @@ static inline void set595(bool fanEnable, uint8_t digit, uint8_t character) {
 
 volatile uint16_t pulseWidth = 0;
 volatile bool ledUpdateFlag = true;
-volatile uint8_t power = 30;
+volatile uint8_t power = 10;
 volatile bool fanEnabled = false;
-volatile DISP disp = DISP_RPM;
+volatile DISP disp = DISP_POWER;
 volatile uint8_t dispCharBuffer[4] = {};
 
 int main() {
