@@ -78,7 +78,7 @@ static inline void set595(bool fanEnable, uint8_t digit, uint8_t character) {
 
 volatile uint16_t pulseWidth = 0;
 volatile bool ledUpdateFlag = true;
-volatile uint8_t power = 10;
+volatile uint8_t power = 100;
 volatile bool fanEnabled = false;
 volatile DISP disp = DISP_POWER;
 volatile uint8_t dispCharBuffer[4] = {};
