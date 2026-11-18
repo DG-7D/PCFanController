@@ -4,7 +4,7 @@
 constexpr uint8_t POWER_STEP = 10;
 constexpr uint16_t MIN_RPM = 120;
 constexpr float LED_BRIGHTNESS = 1;
-constexpr uint8_t HYSTERESIS_TICKS = 8;
+constexpr uint8_t HYSTERESIS_TICKS = 10;
 
 constexpr uint32_t PWM_FREQ = 25000;           // ticks/s
 constexpr uint8_t LED_TICKS_PER_DIGIT = 64;    // 1桁391Hz、4桁98Hz
@@ -115,6 +115,7 @@ int main() {
 
     uint16_t ticksFiltered = 0;
     uint8_t digit = 0;
+    uint8_t zeroTicksCount = 0;
     while (1) {
         TCA0.SINGLE.CMP1 = PWM_PERIOD_CLOCKS * (100 - power) / 100;
 
@@ -136,8 +137,13 @@ int main() {
                         sei();
                         uint16_t rpm;
                         if (ticks == 0) {
-                            rpm = 0;
+                            if (zeroTicksCount == 10) {
+                                rpm = 0;
+                            } else {
+                                zeroTicksCount++;
+                            }
                         } else {
+                            zeroTicksCount = 0;
                             if (ticks < ticksFiltered - HYSTERESIS_TICKS) {
                                 ticksFiltered = ticks + HYSTERESIS_TICKS / 2;
                             } else if (ticksFiltered + HYSTERESIS_TICKS < ticks) {
@@ -148,6 +154,12 @@ int main() {
                         for (uint8_t i = 0; i < 4; i++) {
                             dispCharBuffer[i] = '0' + (rpm / POW10[i] % 10);
                         }
+                        // sendUART('0' + ticks / 10000 % 10);
+                        // sendUART('0' + ticks / 1000 % 10);
+                        sendUART('0' + ticks / 100 % 10);
+                        sendUART('0' + ticks / 10 % 10);
+                        sendUART('0' + ticks / 1 % 10);
+                        sendUART('\n');
                         break;
                     }
                     case DISP_POWER: {
@@ -164,12 +176,6 @@ int main() {
                     dispCharBuffer[1] = 'F';
                     dispCharBuffer[0] = 'F';
                 }
-
-                sendUART(dispCharBuffer[3]);
-                sendUART(dispCharBuffer[2]);
-                sendUART(dispCharBuffer[1]);
-                sendUART(dispCharBuffer[0]);
-                sendUART('\n');
             }
             set595(fanEnabled, digit, dispCharBuffer[digit]);
             TCA0.SINGLE.CMP0 = LED_ENABLE_CLOCKS;
